@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Automation is your friend &#8212; test</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/yeti/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.10.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/canopee_ico.ico"/>
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Practical problem solving" href="practical-problem-solving.html" />
+    <link rel="prev" title="Creating scientific documents" href="creating-scientific-documents.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          test</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Yo!test <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#who-should-read-this-book">Who should read this book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#licence">Licence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#source-code">Source code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting-some-motivation.html">Getting some motivation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting-some-motivation.html#why-you-should-care-about-computing-and-coding">Why you should care about computing and coding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-some-motivation.html#what-you-can-expect-to-learn-here">What you can expect to learn here</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-think-like-a-computer.html">How to think like a computer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#binary-bits-and-bytes">Binary, bits and bytes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#character-encodings">Character encodings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#real-numbers">Real numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#boolean-logic">Boolean logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#the-microprocessor">The microprocessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#computer-memory">Computer memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="first-steps-towards-automation.html">First steps towards automation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#first-things-first-how-to-find-help">First things first, how to find help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#creating-a-new-directory-for-our-project">Creating a new directory for our project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#downloading-the-swiss-prot-knowledge-base">Downloading the Swiss-Prot knowledge base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#creating-a-work-flow-using-pipes">Creating a work flow using pipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#examining-files-without-modifying-them">Examining files, without modifying them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#finding-fasta-identifier-lines-corresponding-to-human-proteins">Finding FASTA identifier lines corresponding to human proteins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#extracting-the-uniprot-identifiers">Extracting the UniProt identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#using-redirection-to-create-an-output-file">Using redirection to create an output file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#viewing-the-command-history">Viewing the command history</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#clearing-the-terminal-window">Clearing the terminal window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#copying-and-renaming-files">Copying and renaming files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#removing-files-and-directories">Removing files and directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="structuring-and-storing-data.html">Structuring and storing data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#data-persistence">Data persistence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#the-beauty-of-plain-text-files">The beauty of plain text files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#useful-plain-text-file-formats">Useful plain text file formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#tidy-data">Tidy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#find-a-good-text-editor-and-learn-how-to-use-it">Find a good text editor and learn how to use it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="keeping-track-of-your-work.html">Keeping track of your work</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#what-is-git">What is Git?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#first-time-configuration-of-git">First time configuration of Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#initialise-the-project">Initialise the project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#create-a-script-for-downloading-the-swissprot-fasta-file">Create a script for downloading the SwissProt FASTA file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#improve-script-for-downloading-swissprot-fasta-file">Improve script for downloading SwissProt FASTA file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#create-script-for-counting-the-number-of-proteins-in-a-genome">Create script for counting the number of proteins in a genome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#more-useful-git-commands">More useful git commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-analysis.html">Data analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#what-is-python">What is Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#using-python-in-interactive-mode">Using Python in interactive mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#determining-the-gc-count-of-a-sequence">Determining the GC count of a sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-reusable-functions">Creating reusable functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#list-slicing">List slicing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#loops">Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-a-sliding-window-gc-content-function">Creating a sliding window GC-content function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#downloading-the-genome">Downloading the genome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#reading-and-writing-files">Reading and writing files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-a-function-for-reading-in-the-streptomyces-sequence">Creating a function for reading in the <em>Streptomyces</em> sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#writing-out-the-sliding-window-analysis">Writing out the sliding window analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-visualisation.html">Data visualisation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#starting-r-and-loading-the-iris-flower-data-set">Starting R and loading the Iris flower data set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#understanding-the-structure-of-the-iris-data-set">Understanding the structure of the <code class="docutils literal"><span class="pre">iris</span></code> data set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#a-note-on-statistics-in-r">A note on statistics in R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#default-plotting-in-r">Default plotting in R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#installing-the-ggplot2-package">Installing the ggplot2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#loading-the-ggplot2-package">Loading the ggplot2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#plotting-using-ggplot2">Plotting using ggplot2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#available-geoms">Available &#8220;Geoms&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#scripting-data-visualisation">Scripting data visualisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#faceting">Faceting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#adding-more-colour">Adding more colour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#purpose-of-data-visualisation">Purpose of data visualisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#conveying-a-message-to-an-audience">Conveying a message to an audience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#writing-a-caption">Writing a caption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#other-useful-tools-for-scripting-the-generation-of-figures">Other useful tools for scripting the generation of figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collaborating-on-projects.html">Collaborating on projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#find-a-friend">Find a friend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#get-a-github-or-bitbucket-account">Get a GitHub or BitBucket account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#pushing-the-project-to-a-remote-server">Pushing the project to a remote server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#collaboration-using-git">Collaboration using Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#working-in-parallel">Working in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#resolving-conflicts">Resolving conflicts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="creating-scientific-documents.html">Creating scientific documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#starting-the-manuscript">Starting the manuscript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#converting-the-document-to-html-using-pandoc">Converting the document to HTML using pandoc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#adding-a-figure">Adding a figure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#converting-the-document-to-pdf">Converting the document to PDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#reference-management">Reference management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#adding-meta-data">Adding meta data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#benefits-of-using-pandoc-and-plain-text-files">Benefits of using Pandoc and plain text files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#alternative-plain-text-approaches">Alternative plain text approaches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#using-non-plain-text-file-formats">Using non-plain text file formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Automation is your friend</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-make">Introduction to <code class="docutils literal"><span class="pre">make</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-makefile">Creating a <code class="docutils literal"><span class="pre">Makefile</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="practical-problem-solving.html">Practical problem solving</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#stop-and-think">Stop and think</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#measuring-success">Measuring success</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#more-string-processing">More string processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#extracting-the-organism-name">Extracting the organism name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#only-running-tests-when-the-module-is-called-directly">Only running tests when the module is called directly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#counting-the-number-of-unique-organisms">Counting the number of unique organisms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#finding-the-number-of-variants-per-species-and-the-number-of-proteins-per-variant">Finding the number of variants per species and the number of proteins per variant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="working-remotely.html">Working remotely</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#jargon-busting">Jargon busting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#logging-in-using-the-secure-shell-protocol">Logging in using the Secure Shell protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#copying-files-using-secure-copy">Copying files using Secure Copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#password-less-authentication-using-ssh-keys">Password-less authentication using SSH keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#managing-your-login-details-using-ssh-config">Managing your login details using SSH config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#executing-long-running-commands-on-remote-hosts">Executing long running commands on remote hosts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="managing-your-system.html">Managing your system</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-file-system">The file system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-path-environment-variable">The <code class="docutils literal"><span class="pre">PATH</span></code> environment variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-root-user">The <code class="docutils literal"><span class="pre">root</span></code> user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#using-package-managers">Using package managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#compiling-software-from-source">Compiling software from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-python-packages">Installing Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-r-packages">Installing R packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-perl-modules">Installing Perl modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-latex-packages">Installing Latex packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#automated-provisioning">Automated provisioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="next-steps.html">Next steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#apply-what-you-have-learnt">Apply what you have learnt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#be-social">Be social</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#recommended-reading">Recommended reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Automation is your friend</a><ul>
+<li><a class="reference internal" href="#introduction-to-make">Introduction to <code class="docutils literal"><span class="pre">make</span></code></a></li>
+<li><a class="reference internal" href="#creating-a-makefile">Creating a <code class="docutils literal"><span class="pre">Makefile</span></code></a></li>
+<li><a class="reference internal" href="#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="automation-is-your-friend">
+<h1>Automation is your friend</h1>
+<p>Have you ever felt your heart sink upon reading the reviewer comments along the
+lines of: <em>&#8220;very nice analysis, but it would be useful if it was performed on
+species x, y and z as well&#8221;</em>? Or perhaps you have spent weeks analysing data
+and generating figures only to find out that a newer and more complete data
+set has become available?</p>
+<p>In these circumstances would it not be nice if all you had to do was point
+your project at a new URL from where the latest version of the data could be
+downloaded and all the analyses, figures and the manuscript were magically
+updated for you?</p>
+<p>This is possible! In this chapter we will make use of a tool called <code class="docutils literal"><span class="pre">make</span></code>
+to automate all the steps from <a class="reference internal" href="data-analysis.html"><span class="doc">Data analysis</span></a>, <a class="reference internal" href="data-visualisation.html"><span class="doc">Data visualisation</span></a>
+and <a class="reference internal" href="creating-scientific-documents.html"><span class="doc">Creating scientific documents</span></a>.</p>
+<div class="section" id="introduction-to-make">
+<h2>Introduction to <code class="docutils literal"><span class="pre">make</span></code></h2>
+<p>The <code class="docutils literal"><span class="pre">make</span></code> tool is commonly used to build software. As such <code class="docutils literal"><span class="pre">make</span></code> is
+a tool for managing dependencies in a build system, where dependencies
+are organised into a tree (as in a graph). People in the software industry
+often talk about dependency graphs.</p>
+<p>The <code class="docutils literal"><span class="pre">make</span></code> program makes use of a file named <code class="docutils literal"><span class="pre">Makefile</span></code> in
+the working directory. A &#8220;Makefile&#8221; contains rules. Each rule consists of
+a target (the stuff to be created), prerequisites (the stuff needed to
+build the target) and a recipe (the instructions for how to create the
+target from the prerequisites).</p>
+<p>Creating rules in a file named <code class="docutils literal"><span class="pre">Makefile</span></code> is therefore a means to
+create an automated build process.</p>
+</div>
+<div class="section" id="creating-a-makefile">
+<h2>Creating a <code class="docutils literal"><span class="pre">Makefile</span></code></h2>
+<p>First of all ensure that you are in the <code class="docutils literal"><span class="pre">S.coelicolor-local-GC-content</span></code>
+directory created in <a class="reference internal" href="data-analysis.html"><span class="doc">Data analysis</span></a>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ cd S.coelicolor-local-GC-content
+</pre></div>
+</div>
+<p>One of the first steps in <a class="reference internal" href="data-analysis.html"><span class="doc">Data analysis</span></a> was to download the
+<em>S. coelicolor</em> genome. Let&#8217;s start by creating a rule for this step.
+Using your favorite text editor create a file named <code class="docutils literal"><span class="pre">Makefile</span></code> and
+add the content below to it.</p>
+<div class="highlight-makefile"><div class="highlight"><pre><span></span><span class="nf">Sco.dna</span><span class="o">:</span>
+        curl --location --output Sco.dna http://bit.ly/1Q8eKWT
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Avertissement</p>
+<p class="last">The <code class="docutils literal"><span class="pre">make</span></code> program expects the lines to be indented using
+the Tab character so make sure that the <code class="docutils literal"><span class="pre">curl</span></code> command is
+preceded by a Tab character and not a bunch of white spaces.</p>
+</div>
+<p>In this first rule <code class="docutils literal"><span class="pre">Sco.dna</span></code> is the target. The target has no prerequisites
+and the recipe has one instruction to download the file using
+<code class="docutils literal"><span class="pre">curl</span></code>.</p>
+<p>Now we can run the <code class="docutils literal"><span class="pre">make</span></code> command.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ make
+make: `Sco.dna&#39; is up to date.
+</pre></div>
+</div>
+<p>Let&#8217;s add another rule for cleaning up the working directory.</p>
+<div class="highlight-makefile"><div class="highlight"><pre><span></span><span class="nf">Sco.dna</span><span class="o">:</span>
+        curl --location --output Sco.dna http://bit.ly/1Q8eKWT
+
+<span class="hll"><span class="nf">clean</span><span class="o">:</span>
+</span><span class="hll">        rm Sco.dna
+</span></pre></div>
+</div>
+<p>When invoking <code class="docutils literal"><span class="pre">make</span></code> it is possible to specify which rule to run.
+Let&#8217;s clean up.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ make clean
+rm Sco.dna
+</pre></div>
+</div>
+<p>If we run make now it will notice that the <code class="docutils literal"><span class="pre">Sco.dna</span></code> file does not
+exist and will download it.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ make
+curl --location --output Sco.dna http://bit.ly/1Q8eKWT
+</pre></div>
+</div>
+<p>Now we need a rule to create the <code class="docutils literal"><span class="pre">local_gc_content.csv</span></code> (the target)
+from the <code class="docutils literal"><span class="pre">Sco.dna</span></code> file (the prerequisite). Add the lines below to
+the top of the <code class="docutils literal"><span class="pre">Makefile</span></code>.</p>
+<div class="highlight-makefile"><div class="highlight"><pre><span></span><span class="nf">local_gc_content.csv</span><span class="o">:</span> <span class="n">Sco</span>.<span class="n">dna</span>
+        python dna2csv.py
+</pre></div>
+</div>
+<p>Now update the <code class="docutils literal"><span class="pre">clean</span></code> rule.</p>
+<div class="highlight-makefile"><div class="highlight"><pre><span></span><span class="nf">clean</span><span class="o">:</span>
+        rm Sco.dna
+<span class="hll">        rm local_gc_content.csv
+</span></pre></div>
+</div>
+<p>Let&#8217;s clean up again.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ make clean
+rm Sco.dna
+rm local_gc_content.csv
+</pre></div>
+</div>
+<p>Now we have removed <code class="docutils literal"><span class="pre">Sco.dna</span></code> and <code class="docutils literal"><span class="pre">local_gc_content.csv</span></code>.
+This is a good opportunity to show that <code class="docutils literal"><span class="pre">make</span></code> resolves dependencies.
+We can do this by calling the <code class="docutils literal"><span class="pre">local_gc_content.csv</span></code> rule, this will
+in turn call the <code class="docutils literal"><span class="pre">Sco.dna</span></code> rule.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ make local_gc_content.csv
+curl --location --output Sco.dna http://bit.ly/1Q8eKWT
+python dna2csv.py
+</pre></div>
+</div>
+<p>That&#8217;s cool, <code class="docutils literal"><span class="pre">make</span></code> uses the information about requirements to
+build any missing pieces.</p>
+<p>Let&#8217;s add another rule for generating the <code class="docutils literal"><span class="pre">local_gc_content.png</span></code> file
+from the <code class="docutils literal"><span class="pre">local_gc_content.csv</span></code> file. Add the lines below to the top
+of the <code class="docutils literal"><span class="pre">Makefile</span></code>.</p>
+<div class="highlight-makefile"><div class="highlight"><pre><span></span><span class="nf">local_gc_content.png</span><span class="o">:</span> <span class="n">local_gc_content</span>.<span class="n">csv</span>
+        Rscript csv2png.R
+</pre></div>
+</div>
+<p>Let&#8217;s also remember to update the rule for cleaning up.</p>
+<div class="highlight-makefile"><div class="highlight"><pre><span></span><span class="nf">clean</span><span class="o">:</span>
+        rm Sco.dna
+        rm local_gc_content.csv
+<span class="hll">        rm local_gc_content.png
+</span></pre></div>
+</div>
+<p>Finally, let&#8217;s add a rule for building the manuscript as a PDF file and update
+the <code class="docutils literal"><span class="pre">clean</span></code> rule to remove it.</p>
+<div class="highlight-makefile"><div class="highlight"><pre><span></span><span class="hll"><span class="nf">manuscript.pdf</span><span class="o">:</span> <span class="n">local_gc_content</span>.<span class="n">png</span>
+</span><span class="hll">        pandoc -f markdown -t latex -s manuscript.md -o manuscript.pdf   <span class="se">\</span>
+</span><span class="hll">        --filter pandoc-citeproc
+</span>
+<span class="nf">local_gc_content.png</span><span class="o">:</span> <span class="n">local_gc_content</span>.<span class="n">csv</span>
+        Rscript csv2png.R
+
+<span class="nf">local_gc_content.csv</span><span class="o">:</span> <span class="n">Sco</span>.<span class="n">dna</span>
+        python dna2csv.py
+
+<span class="nf">Sco.dna</span><span class="o">:</span>
+        curl --location --output Sco.dna http://bit.ly/1Q8eKWT
+
+<span class="nf">clean</span><span class="o">:</span>
+        rm Sco.dna
+        rm local_gc_content.csv
+        rm local_gc_content.png
+<span class="hll">        rm manuscript.pdf
+</span></pre></div>
+</div>
+<p>Let&#8217;s try it.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ make clean
+rm Sco.dna
+rm local_gc_content.csv
+rm local_gc_content.png
+rm manuscript.pdf
+</pre></div>
+</div>
+<p>Double check that the files have actually been removed.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ls
+Makefile           csv2png.R          nature.csl
+README.md          dna2csv.py         references.bib
+bioinformatics.csl manuscript.md
+</pre></div>
+</div>
+<p>Now let&#8217;s build the <code class="docutils literal"><span class="pre">manuscript.pdf</span></code> file from scratch.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ make
+curl --location --output Sco.dna http://bit.ly/1Q8eKWT
+python dna2csv.py
+Rscript csv2png.R
+pandoc -f markdown -t latex -s manuscript.md -o manuscript.pdf   \
+        --filter pandoc-citeproc
+</pre></div>
+</div>
+<p>Very cool!</p>
+<p>Now suppose that for some reason we needed to use a different genome
+file. In this case we would only need to update the URL used in the
+Makefile&#8217;s <code class="docutils literal"><span class="pre">Sco.dna</span></code> rule and run <code class="docutils literal"><span class="pre">make</span></code> again! Amazing!</p>
+<p>This is a good point to commit a snapshot of the Git repository.
+First of all let&#8217;s clean up.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ make clean
+rm Sco.dna
+rm local_gc_content.csv
+rm local_gc_content.png
+rm manuscript.pdf
+</pre></div>
+</div>
+<p>Now let&#8217;s check the status of the project.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git status
+On branch master
+Your branch is up-to-date with &#39;origin/master&#39;.
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        Makefile
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</pre></div>
+</div>
+<p>Great let&#8217;s add and commit the <code class="docutils literal"><span class="pre">Makefile</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git add Makefile
+$ git commit -m &quot;Added Makefile to build manuscript.pdf&quot;
+[master 5d74b6a] Added Makefile to build manuscript.pdf
+ 1 file changed, 18 insertions(+)
+ create mode 100644 Makefile
+</pre></div>
+</div>
+<p>Finally, we push the changes to GitHub.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 498 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/tjelvar-olsson/S.coelicolor-local-GC-content.git
+   bea89f4..5d74b6a  master -&gt; master
+</pre></div>
+</div>
+<p>This was quite a short chapter which illustrates that automation does not need
+to be painful!</p>
+<p>Note that as well as automating the building of the manuscript the rules in the
+Makefile serve as authoritative documentation that can be used to understand
+how the different components of the project fit together.</p>
+</div>
+<div class="section" id="key-concepts">
+<h2>Key concepts</h2>
+<ul class="simple">
+<li>Automation is your friend</li>
+<li>The <code class="docutils literal"><span class="pre">make</span></code> command builds projects using rules specified in the <code class="docutils literal"><span class="pre">Makefile</span></code></li>
+<li>By specifying requirements for each target in the <code class="docutils literal"><span class="pre">Makefile</span></code> the <code class="docutils literal"><span class="pre">make</span></code> command
+can work out what the dependency graph is</li>
+<li>It is good practice to specify a <code class="docutils literal"><span class="pre">clean</span></code> rule for removing files that are built
+automatically</li>
+<li>Automation saves you time in the long run</li>
+<li>Good automation scripts also serve a purpose as technical documentation of a project</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, otu.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

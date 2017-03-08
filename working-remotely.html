@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Working remotely &#8212; test</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/yeti/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.10.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/canopee_ico.ico"/>
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Managing your system" href="managing-your-system.html" />
+    <link rel="prev" title="Practical problem solving" href="practical-problem-solving.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          test</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Yo!test <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#who-should-read-this-book">Who should read this book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#licence">Licence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#source-code">Source code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting-some-motivation.html">Getting some motivation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting-some-motivation.html#why-you-should-care-about-computing-and-coding">Why you should care about computing and coding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-some-motivation.html#what-you-can-expect-to-learn-here">What you can expect to learn here</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-think-like-a-computer.html">How to think like a computer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#binary-bits-and-bytes">Binary, bits and bytes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#character-encodings">Character encodings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#real-numbers">Real numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#boolean-logic">Boolean logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#the-microprocessor">The microprocessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#computer-memory">Computer memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="first-steps-towards-automation.html">First steps towards automation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#first-things-first-how-to-find-help">First things first, how to find help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#creating-a-new-directory-for-our-project">Creating a new directory for our project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#downloading-the-swiss-prot-knowledge-base">Downloading the Swiss-Prot knowledge base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#creating-a-work-flow-using-pipes">Creating a work flow using pipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#examining-files-without-modifying-them">Examining files, without modifying them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#finding-fasta-identifier-lines-corresponding-to-human-proteins">Finding FASTA identifier lines corresponding to human proteins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#extracting-the-uniprot-identifiers">Extracting the UniProt identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#using-redirection-to-create-an-output-file">Using redirection to create an output file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#viewing-the-command-history">Viewing the command history</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#clearing-the-terminal-window">Clearing the terminal window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#copying-and-renaming-files">Copying and renaming files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#removing-files-and-directories">Removing files and directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="structuring-and-storing-data.html">Structuring and storing data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#data-persistence">Data persistence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#the-beauty-of-plain-text-files">The beauty of plain text files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#useful-plain-text-file-formats">Useful plain text file formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#tidy-data">Tidy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#find-a-good-text-editor-and-learn-how-to-use-it">Find a good text editor and learn how to use it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="keeping-track-of-your-work.html">Keeping track of your work</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#what-is-git">What is Git?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#first-time-configuration-of-git">First time configuration of Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#initialise-the-project">Initialise the project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#create-a-script-for-downloading-the-swissprot-fasta-file">Create a script for downloading the SwissProt FASTA file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#improve-script-for-downloading-swissprot-fasta-file">Improve script for downloading SwissProt FASTA file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#create-script-for-counting-the-number-of-proteins-in-a-genome">Create script for counting the number of proteins in a genome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#more-useful-git-commands">More useful git commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-analysis.html">Data analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#what-is-python">What is Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#using-python-in-interactive-mode">Using Python in interactive mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#determining-the-gc-count-of-a-sequence">Determining the GC count of a sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-reusable-functions">Creating reusable functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#list-slicing">List slicing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#loops">Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-a-sliding-window-gc-content-function">Creating a sliding window GC-content function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#downloading-the-genome">Downloading the genome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#reading-and-writing-files">Reading and writing files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-a-function-for-reading-in-the-streptomyces-sequence">Creating a function for reading in the <em>Streptomyces</em> sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#writing-out-the-sliding-window-analysis">Writing out the sliding window analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-visualisation.html">Data visualisation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#starting-r-and-loading-the-iris-flower-data-set">Starting R and loading the Iris flower data set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#understanding-the-structure-of-the-iris-data-set">Understanding the structure of the <code class="docutils literal"><span class="pre">iris</span></code> data set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#a-note-on-statistics-in-r">A note on statistics in R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#default-plotting-in-r">Default plotting in R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#installing-the-ggplot2-package">Installing the ggplot2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#loading-the-ggplot2-package">Loading the ggplot2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#plotting-using-ggplot2">Plotting using ggplot2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#available-geoms">Available &#8220;Geoms&#8221;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#scripting-data-visualisation">Scripting data visualisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#faceting">Faceting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#adding-more-colour">Adding more colour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#purpose-of-data-visualisation">Purpose of data visualisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#conveying-a-message-to-an-audience">Conveying a message to an audience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#writing-a-caption">Writing a caption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#other-useful-tools-for-scripting-the-generation-of-figures">Other useful tools for scripting the generation of figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collaborating-on-projects.html">Collaborating on projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#find-a-friend">Find a friend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#get-a-github-or-bitbucket-account">Get a GitHub or BitBucket account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#pushing-the-project-to-a-remote-server">Pushing the project to a remote server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#collaboration-using-git">Collaboration using Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#working-in-parallel">Working in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#resolving-conflicts">Resolving conflicts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="creating-scientific-documents.html">Creating scientific documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#starting-the-manuscript">Starting the manuscript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#converting-the-document-to-html-using-pandoc">Converting the document to HTML using pandoc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#adding-a-figure">Adding a figure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#converting-the-document-to-pdf">Converting the document to PDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#reference-management">Reference management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#adding-meta-data">Adding meta data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#benefits-of-using-pandoc-and-plain-text-files">Benefits of using Pandoc and plain text files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#alternative-plain-text-approaches">Alternative plain text approaches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#using-non-plain-text-file-formats">Using non-plain text file formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="automation-is-your-friend.html">Automation is your friend</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="automation-is-your-friend.html#introduction-to-make">Introduction to <code class="docutils literal"><span class="pre">make</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation-is-your-friend.html#creating-a-makefile">Creating a <code class="docutils literal"><span class="pre">Makefile</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation-is-your-friend.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="practical-problem-solving.html">Practical problem solving</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#stop-and-think">Stop and think</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#measuring-success">Measuring success</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#more-string-processing">More string processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#extracting-the-organism-name">Extracting the organism name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#only-running-tests-when-the-module-is-called-directly">Only running tests when the module is called directly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#counting-the-number-of-unique-organisms">Counting the number of unique organisms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#finding-the-number-of-variants-per-species-and-the-number-of-proteins-per-variant">Finding the number of variants per species and the number of proteins per variant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Working remotely</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#jargon-busting">Jargon busting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logging-in-using-the-secure-shell-protocol">Logging in using the Secure Shell protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#copying-files-using-secure-copy">Copying files using Secure Copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#password-less-authentication-using-ssh-keys">Password-less authentication using SSH keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#managing-your-login-details-using-ssh-config">Managing your login details using SSH config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#executing-long-running-commands-on-remote-hosts">Executing long running commands on remote hosts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="managing-your-system.html">Managing your system</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-file-system">The file system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-path-environment-variable">The <code class="docutils literal"><span class="pre">PATH</span></code> environment variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-root-user">The <code class="docutils literal"><span class="pre">root</span></code> user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#using-package-managers">Using package managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#compiling-software-from-source">Compiling software from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-python-packages">Installing Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-r-packages">Installing R packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-perl-modules">Installing Perl modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-latex-packages">Installing Latex packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#automated-provisioning">Automated provisioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="next-steps.html">Next steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#apply-what-you-have-learnt">Apply what you have learnt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#be-social">Be social</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#recommended-reading">Recommended reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Working remotely</a><ul>
+<li><a class="reference internal" href="#jargon-busting">Jargon busting</a></li>
+<li><a class="reference internal" href="#logging-in-using-the-secure-shell-protocol">Logging in using the Secure Shell protocol</a></li>
+<li><a class="reference internal" href="#copying-files-using-secure-copy">Copying files using Secure Copy</a></li>
+<li><a class="reference internal" href="#password-less-authentication-using-ssh-keys">Password-less authentication using SSH keys</a></li>
+<li><a class="reference internal" href="#managing-your-login-details-using-ssh-config">Managing your login details using SSH config</a></li>
+<li><a class="reference internal" href="#executing-long-running-commands-on-remote-hosts">Executing long running commands on remote hosts</a></li>
+<li><a class="reference internal" href="#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="working-remotely">
+<h1>Working remotely</h1>
+<p>Sometimes you need to work on a computer different to the one that is in front
+of you. This may be because you are working from home and need to log into your
+work computer. Alternatively it may be because you need to do some work on a
+high-performance computing cluster.</p>
+<p>In this chapter we will cover tools for logging into remote machines using the
+SSH (Secure SHell) protocol. SSH is an open standard that is available on all
+UNIX based systems. In fact it has gained so much traction that Microsoft have
+decided to add support for it in Windows.</p>
+<div class="section" id="jargon-busting">
+<h2>Jargon busting</h2>
+<p>Although, it is relatively simple to log into a remote machine using SSH explaining
+it requires the use of some networking terminology (as we are logging into the
+remote machine over a network). Let us therefore start off with some jargon busting
+before we get into the practical details.</p>
+<p>A computer can be connected to a network using physical Ethernet cables or in a
+wireless fashion using WiFI. Computers connected to the same network can
+communicate with each other.  This communication takes place over so called
+&#8220;ports&#8221;, which are identified by numbers. A famous port is port 80, which is
+used for HTTP (the HyperText Transfer Protocol) a.k.a. web-browsing. There are many
+other ports. For example port 443 is used for HTTPS and port 22 is used for SSH.</p>
+<p>Machines on a network can be identified and accessed via their IP (Internet
+Protocol) address. An IP address that you may have come across is
+<code class="docutils literal"><span class="pre">127.0.0.1</span></code>, it identifies the local machine that you are working on.</p>
+<p>Although very useful, IP addresses can be difficult to remember. In order to overcome
+this problem, internet service providers as well as the people responsible for looking
+after your organisations network make use of domain name servers (DNS). The purpose
+of a DNS server is to translate unique resource locations (URLs) to IP addresses.</p>
+<p>A DNS server can also be used to lookup the IP address of a machine given a
+simpler more memorable name. To illustrate this we can find the IP address(es)
+of Google&#8217;s web servers using the command <code class="docutils literal"><span class="pre">host</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ host www.google.com
+www.google.com has address 62.164.169.148
+www.google.com has address 62.164.169.185
+www.google.com has address 62.164.169.163
+www.google.com has address 62.164.169.177
+www.google.com has address 62.164.169.166
+www.google.com has address 62.164.169.152
+www.google.com has address 62.164.169.155
+www.google.com has address 62.164.169.154
+www.google.com has address 62.164.169.176
+www.google.com has address 62.164.169.159
+www.google.com has address 62.164.169.165
+www.google.com has address 62.164.169.181
+www.google.com has address 62.164.169.187
+www.google.com has address 62.164.169.170
+www.google.com has address 62.164.169.144
+www.google.com has address 62.164.169.174
+www.google.com has IPv6 address 2a00:1450:4009:810::2004
+</pre></div>
+</div>
+<p>If you copy and paste one of the IP addresses above into a web browser you
+should see the Google home page.</p>
+<p>Throughout the remainder of this chapter we will connect to remote machines
+using their hostname. What happens in practise is that your institutes DNS
+server translates this hostname to an IP address and you send your
+communications over the network to the machine identified by that IP address.
+Furthermore when you communicate with the remote machine you will be using
+a specific port. The default port for the SSH protocol is port 22.</p>
+</div>
+<div class="section" id="logging-in-using-the-secure-shell-protocol">
+<h2>Logging in using the Secure Shell protocol</h2>
+<p>In its most basic form the <code class="docutils literal"><span class="pre">ssh</span></code> command takes on the form <code class="docutils literal"><span class="pre">ssh</span> <span class="pre">hostname</span></code>.
+Where <code class="docutils literal"><span class="pre">hostname</span></code> is the name of the remote machine that you want to log in to.
+This assumes that you want to login to the remote machine using the same user
+name as that on the local machine. This is often not the case and it is
+common to see the <code class="docutils literal"><span class="pre">ssh</span></code> command in the form <code class="docutils literal"><span class="pre">ssh</span> <span class="pre">user&#64;hostname</span></code>, where
+<code class="docutils literal"><span class="pre">user</span></code> is the Unix user name you want to log in as on the remote machine.</p>
+<p>Let us illustrate this with an example. Suppose that one wanted to login to a
+remote computer named <code class="docutils literal"><span class="pre">hpc</span></code>, this could for example be the head node on your
+institutes high-performance computing cluster. Assuming that your user name on
+the head node was <code class="docutils literal"><span class="pre">olssont</span></code> then you could log in using the command below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ssh olssont@hpc
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Avertissement</p>
+<p>All of the remote machines in this chapter are fictional. This
+means that if you try to run the commands verbatim you will see
+errors along the lines of the below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>ssh: Could not resolve hostname ...
+</pre></div>
+</div>
+<p class="last">When trying these examples make sure that you are trying to connect
+to a machine that exists on your network.</p>
+</div>
+<p>If the machine that you are trying to log in to has a port 22 open (the
+default SSH port) you will be prompted for your password.</p>
+<div class="sidebar">
+<p class="first sidebar-title">What is a head node?</p>
+<p>A computing cluster is basically a collection of computers. Computing
+clusters tend to make use of a scheduler to distribute jobs on the cluster.
+A scheduler is basically a piece of software that has an understanding of the
+computing resources available on the cluster. A user submits a job to the
+scheduler and the scheduler puts the job in a queue and when appropriate resources
+become available it starts the job on the cluster.</p>
+<p class="last">Most schedulers require a so
+called head node, also known as a master node, which acts as the control centre.
+A user of a cluster would therefore login to the head node and from there the user
+would submit a job to the scheduler. The scheduler would then dispatches
+the job on one or more cluster nodes when the appropriate resources became
+available.</p>
+</div>
+<p>The above assumes that your DNS server can resolve the name <code class="docutils literal"><span class="pre">hpc</span></code> into an IP
+address. Depending on how things are setup in your organisation you may need to
+use a more explicit name, for example
+<code class="docutils literal"><span class="pre">hpc.awesomeuni.ac.uk</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ssh olssont@hpc.awesomeuni.ac.uk
+</pre></div>
+</div>
+<p>If your user name and  password authenticates successfully the shell in your terminal will
+now be from the remote machine. To find out the name of the machine that you
+are logged into you can run the command <code class="docutils literal"><span class="pre">hostname</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ hostname
+hpc
+</pre></div>
+</div>
+<p>To disconnect from the remote host you can use <code class="kbd docutils literal"><span class="pre">Ctrl-D</span></code> or the <code class="docutils literal"><span class="pre">exit</span></code>
+command.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ exit
+$ hostname
+olssont-laptop
+</pre></div>
+</div>
+<p>In the above the <code class="docutils literal"><span class="pre">hostname</span></code> command prints out the hostname of the local machine.</p>
+<p>By default port 22 is used for the SSH protocol. However, sometimes a machine
+may expose its SSH server on a different port. For example if
+we had a machine called <code class="docutils literal"><span class="pre">bishop</span></code> that exposed its SSH server on port 2222
+one could login to it using the command below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ssh -p 2222 olssont@bishop
+</pre></div>
+</div>
+<p>In the above the <code class="docutils literal"><span class="pre">-p</span></code> flag is used to specify the port to connect to.</p>
+<p>Sometimes you want to be able to run software that makes use of windowing
+systems (i.e. all software with a graphical user interface). For example the
+statistical software package <code class="docutils literal"><span class="pre">R</span></code> has built in functionality for displaying
+plots in a graphical window, which means it requires a windowing system. Most
+Unix-based systems make use of the X11 as their windowing system. We therefore
+need to enable X11-forwarding in SSH to be able to run programs that require
+graphics. This is achieved using the <code class="docutils literal"><span class="pre">-X</span></code> flag.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ssh -X olssont@pawn
+</pre></div>
+</div>
+<p>In the above we are connecting to a machine named <code class="docutils literal"><span class="pre">pawn</span></code> with X11-forwarding
+enabled.</p>
+</div>
+<div class="section" id="copying-files-using-secure-copy">
+<h2>Copying files using Secure Copy</h2>
+<p>Now that we know how to login to a remote machine we need to work out how to
+copy data to and from it. This is achieved using the <code class="docutils literal"><span class="pre">scp</span></code>, <em>secure copy</em>,
+command.</p>
+<p>Suppose that we wanted to copy the file <code class="docutils literal"><span class="pre">mydata.csv</span></code> over to <code class="docutils literal"><span class="pre">olssont</span></code>&#8216;s
+home directory on the <code class="docutils literal"><span class="pre">hpc</span></code> head node, we could achieve this using the
+command below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ scp mydata.csv olssont@hpc:
+</pre></div>
+</div>
+<p>Note the colon (<code class="docutils literal"><span class="pre">:</span></code>) after the host name. It demarcates the end of the host name
+and the beginning of the location to copy the file to on the remote machine.
+In this instance the latter is left empty and as such the original file name is used
+and the location for the file defaults to <code class="docutils literal"><span class="pre">olssont</span></code>&#8216;s home directory on the remote
+machine. The command above is equivalent to that below which specifies the home directory
+using a relative path (<code class="docutils literal"><span class="pre">~/</span></code>).</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ scp mydata.csv olssont@hpc:~/
+</pre></div>
+</div>
+<p>It is also possible to specify the location using an absolute path. For example
+if we wanted to save the file in the <code class="docutils literal"><span class="pre">/tmp</span></code> directory this could be achieved
+using the command below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ scp mydata.csv olssont@hpc:/tmp/
+</pre></div>
+</div>
+<p>Just like with the <code class="docutils literal"><span class="pre">cp</span></code> command it is possible to give the copied file a
+different name. For example to name it <code class="docutils literal"><span class="pre">data.csv</span></code> (and place it in the <code class="docutils literal"><span class="pre">/tmp</span></code>
+directory) one could use the command below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ scp mydata.csv olssont@hpc:/tmp/data.csv
+</pre></div>
+</div>
+<p>If the SSH server is listening on a port other than 22 one needs to specify the port
+explicitly. Confusingly the argument for this is not the same as for the <code class="docutils literal"><span class="pre">ssh</span></code> command.
+The <code class="docutils literal"><span class="pre">scp</span></code> command uses the argument <code class="docutils literal"><span class="pre">-P</span></code>, i.e. it uses upper rather than lower case.
+So if we wanted to copy the data to <code class="docutils literal"><span class="pre">bishop</span></code>, where the SSH server is listening
+on port 2222 one could use the command below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ scp -P 2222 mydata.csv olssont@bishop:
+</pre></div>
+</div>
+<p>Sometimes one wants to copy the entire content of a directory. In this case one can use
+the <code class="docutils literal"><span class="pre">-r</span></code> option to <em>recursively</em> copy all the content of the specified directory. For
+example if we had a directory named <code class="docutils literal"><span class="pre">data</span></code> and we wanted to copy it to <code class="docutils literal"><span class="pre">pawn</span></code> one
+could use the command below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ scp -r data/ olssont@pawn:
+</pre></div>
+</div>
+<p>All of the commands above will prompt you for your password. This can get tedious.
+In the next section we will look at a  more secure and less annoying way of
+managing the authentication step when working with remote machines.</p>
+</div>
+<div class="section" id="password-less-authentication-using-ssh-keys">
+<h2>Password-less authentication using SSH keys</h2>
+<p>An alternative and more secure method to using password based authentication is to use
+public-key cryptography. Public-key cryptography, also known as asymmetric cryptography,
+uses a pair of so called &#8220;keys&#8221;. One of these keys is public and one is private. The
+public key is one that you can distribute freely, in this case to all the remote machines
+that you want to be able to login to. However, the private key must never be compromised
+as it is what allows you access to all the remote machines. One way to think about this
+system is to view the public key as a lock that only the private key can open.
+You can fit the all the machines that you want secure access to with copies of
+the same public key as long as you keep the private key safe.</p>
+<p>Enough theory let&#8217;s try it out.</p>
+<p>The first step is to generate a public/private key pair. This is achieved using
+the command <code class="docutils literal"><span class="pre">ssh-keygen</span></code>. This will prompt you for the file to save the key
+as, the default <code class="docutils literal"><span class="pre">~/.ssh/id_rsa</span></code> file is a good option if you have not yet
+setup any key pairs. You will then be prompted, to optionally, enter a
+passphrase.  This provides another layer of protection in case someone gets
+hold of your private key. However, it does mean that you will be prompted for
+the passphrase the first time you make use of the key in a newly booted system.
+Personally, I am paranoid so I make use of the passphrase and I suggest that
+you do too.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/olssont/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+</pre></div>
+</div>
+<p>If you used the default naming scheme for your key pair you should now have two
+files in your <code class="docutils literal"><span class="pre">.ssh</span></code> directory: <code class="docutils literal"><span class="pre">id_rsa</span></code> (your private key) and <code class="docutils literal"><span class="pre">id_rsa.pub</span></code>
+(your public key).</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ls -l .ssh/
+-rw-------  1 olssont  NR4\Domain Users   1679 23 Feb  2015 id_rsa
+-rw-r--r--  1 olssont  NR4\Domain Users    407 23 Feb  2015 id_rsa.pub
+</pre></div>
+</div>
+<p>Note that only the user has read/write permissions on the private key, whereas
+the pubic key is readable by everyone.</p>
+<p>Now let us setup password-less login to the cluster head node. First of all let
+us copy the public key to the remote machine using <code class="docutils literal"><span class="pre">scp</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ scp ~/.ssh/id_rsa.pub olssont@hpc:
+</pre></div>
+</div>
+<p>Now we need to login to the head node to configure it. At this point we will
+still need to use our password. Once logged into the head node we need to
+create a <code class="docutils literal"><span class="pre">.ssh</span></code> directory in the user&#8217;s home directory (if it does not
+already exist). We then need to append the public key to a file named
+<code class="docutils literal"><span class="pre">authorized_keys</span></code> in the <code class="docutils literal"><span class="pre">.ssh</span></code> directory. Finally we logout of the head
+node.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ssh olssont@hpc
+$ hostname
+hpc
+$ mkdir .ssh
+$ cat id_rsa.pub &gt;&gt; .ssh/authorized_keys
+$ exit
+</pre></div>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">What does the <code class="docutils literal"><span class="pre">&gt;&gt;</span></code> expression do?</p>
+<p class="last">The <code class="docutils literal"><span class="pre">&gt;&gt;</span></code> symbol is similar to the <code class="docutils literal"><span class="pre">&gt;</span></code> redirection symbol. However,
+redirection using <code class="docutils literal"><span class="pre">&gt;</span></code> will replace an existing file whereas <code class="docutils literal"><span class="pre">&gt;&gt;</span></code> will
+append to it. In this case we do not want to destroy any previously added
+public keys so we append to the <code class="docutils literal"><span class="pre">authorized_keys</span></code> file.</p>
+</div>
+<p>Now we should be able to <code class="docutils literal"><span class="pre">ssh</span></code> and <code class="docutils literal"><span class="pre">scp</span></code> to the head node in a password-less fashion.
+If you setup your key pair using a passphrase you will be prompted for it the first time
+you use the key pair.</p>
+<p>Great that&#8217;s really cool! However, it was quite a lot of work to get the public key onto
+the remote machine. There is a better way to do this using the program <code class="docutils literal"><span class="pre">ssh-copy-id</span></code>.
+Depending on the operating system that you are using may need to install this
+program, see <a class="reference internal" href="managing-your-system.html"><span class="doc">Managing your system</span></a> for details on how to install
+software.</p>
+<p>Once you have <code class="docutils literal"><span class="pre">ssh-copy-id</span></code> on your system you can provision a remote machine with your
+public key using a single command. Below we use it to add our pubic key to <code class="docutils literal"><span class="pre">bishop</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ssh-copy-id -i ~/.ssh/id_rsa.pub olssont@bishop
+</pre></div>
+</div>
+<p>The optional <code class="docutils literal"><span class="pre">-i</span></code> flag is used to specify which public key should be copied
+to the remote machine.</p>
+</div>
+<div class="section" id="managing-your-login-details-using-ssh-config">
+<h2>Managing your login details using SSH config</h2>
+<p>Suppose that access to your institutes cluster was setup in a way that required
+you to use the full <code class="docutils literal"><span class="pre">hpc.awesomeuni.ac.uk</span></code> host name, but that you wanted to
+be able to login using the shorter name <code class="docutils literal"><span class="pre">hpc</span></code>. You can configure your machine
+to setup access in this fashion by creating the file <code class="docutils literal"><span class="pre">.ssh/config</span></code> file and adding
+the lines below to it.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Host hpc
+    HostName hpc.awsomeuni.ac.uk
+    User olssont
+</pre></div>
+</div>
+<p>The SSH configuration above also specifies the user name. This means that you
+can login to the head node using the command below (note the lack of a user
+name).</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ssh hpc
+</pre></div>
+</div>
+<p>As you start using
+SSH keys to manage access to various machines you are likely to find yourself
+using multiple key pairs. In this case you will want to be able to specify the name
+of the private key, also known as an identity file, in the <code class="docutils literal"><span class="pre">.ssh/config</span></code> file.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Host hpc
+    HostName hpc.awsomeuni.ac.uk
+    User olssont
+    IdentityFile ~/.ssh/id_rsa
+</pre></div>
+</div>
+<p>Finally in the examples described earlier access to <code class="docutils literal"><span class="pre">bishop</span></code> had been configured
+to use port 2222. To configure access to this remote machine we could use the
+specification below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Host bishop
+    HostName bishop
+    User olssont
+    Port 2222
+    IdentityFile ~/.ssh/id_rsa
+</pre></div>
+</div>
+<p>Again, using the <code class="docutils literal"><span class="pre">.ssh/config</span></code> file in this way means that we do not need to remember
+port numbers and what options to invoke the <code class="docutils literal"><span class="pre">scp</span></code> and <code class="docutils literal"><span class="pre">ssh</span></code> commands with.
+Copying a file can then be achieved using the concise syntax below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ scp mydata.csv bishop:
+</pre></div>
+</div>
+<p>Logging in to the machine becomes similarly trivial.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ssh bishop
+</pre></div>
+</div>
+</div>
+<div class="section" id="executing-long-running-commands-on-remote-hosts">
+<h2>Executing long running commands on remote hosts</h2>
+<p>One problem that one can encounter when working on a remote machine is that if
+the connection is broken whilst a program is running it may fail.</p>
+<p>Luckily, it is quite easy to work around this. All one needs to do is to prefix
+the command to run the program of interest with <code class="docutils literal"><span class="pre">nohup</span></code>. The <code class="docutils literal"><span class="pre">nohup</span></code> command
+makes the program of interest immune to hangups.</p>
+<p>To see this in action open up two terminals on your computer. In one of them
+we will monitor the running processes using the command <code class="docutils literal"><span class="pre">top</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ top
+</pre></div>
+</div>
+<p>This should display a lot of information about the current running processes. To
+make things a little easier to digest we can limit the output to the processes
+owned by you. Press <code class="docutils literal"><span class="pre">U</span></code>, which will prompt you for a user name. Enter your
+user name and press enter. You should now only see the processes owned by you.</p>
+<p>In the second terminal we will simulate a long running program using the
+command <code class="docutils literal"><span class="pre">sleep</span></code>, which simply pauses execution for a specified number of
+seconds.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ sleep 3600
+</pre></div>
+</div>
+<p>In the first terminal, running <code class="docutils literal"><span class="pre">top</span></code>, you should now see the <code class="docutils literal"><span class="pre">sleep</span></code> program
+running.</p>
+<p>Now close the second terminal, the one in which you are running the <code class="docutils literal"><span class="pre">sleep</span></code>
+command. Note that the <code class="docutils literal"><span class="pre">sleep</span></code> program disappears from the <code class="docutils literal"><span class="pre">top</span></code> display.
+This is because the program was interrupted by the closing of the terminal.</p>
+<p>Open a new terminal. This time we will prefix the <code class="docutils literal"><span class="pre">sleep</span></code> command with <code class="docutils literal"><span class="pre">nohup</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ nohup sleep 3600
+</pre></div>
+</div>
+<p>Now close the terminal running the <code class="docutils literal"><span class="pre">sleep</span></code> command again. Note that the <code class="docutils literal"><span class="pre">sleep</span></code>
+command is still present in the <code class="docutils literal"><span class="pre">top</span></code> display. It will keep running until it is
+finished in an hours time.</p>
+</div>
+<div class="section" id="key-concepts">
+<h2>Key concepts</h2>
+<ul class="simple">
+<li>You can use the <code class="docutils literal"><span class="pre">ssh</span></code> command to login to remote machines</li>
+<li>You can copy data to and from remote machines using the <code class="docutils literal"><span class="pre">scp</span></code> command</li>
+<li>You can use SSH keys to avoid having to type in your password every time you want to interact with a remote machine</li>
+<li>Using SSH keys is also more secure than using passwords</li>
+<li>If you need to interact with many remote machines it may make sense to create a <code class="docutils literal"><span class="pre">.ssh/config</span></code> file</li>
+<li>You can use <code class="docutils literal"><span class="pre">nohup</span></code> to ensure that long running processes are not killed by losing connection to the remote machine</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, otu.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
