@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Structuring and storing data &#8212; test</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/yeti/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.10.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/canopee_ico.ico"/>
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Keeping track of your work" href="keeping-track-of-your-work.html" />
+    <link rel="prev" title="First steps towards automation" href="first-steps-towards-automation.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          test</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Yo!test <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#who-should-read-this-book">Who should read this book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#licence">Licence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#source-code">Source code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting-some-motivation.html">Getting some motivation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting-some-motivation.html#why-you-should-care-about-computing-and-coding">Why you should care about computing and coding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-some-motivation.html#what-you-can-expect-to-learn-here">What you can expect to learn here</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-think-like-a-computer.html">How to think like a computer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#binary-bits-and-bytes">Binary, bits and bytes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#character-encodings">Character encodings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#real-numbers">Real numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#boolean-logic">Boolean logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#the-microprocessor">The microprocessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#computer-memory">Computer memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="first-steps-towards-automation.html">First steps towards automation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#first-things-first-how-to-find-help">First things first, how to find help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#creating-a-new-directory-for-our-project">Creating a new directory for our project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#downloading-the-swiss-prot-knowledge-base">Downloading the Swiss-Prot knowledge base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#creating-a-work-flow-using-pipes">Creating a work flow using pipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#examining-files-without-modifying-them">Examining files, without modifying them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#finding-fasta-identifier-lines-corresponding-to-human-proteins">Finding FASTA identifier lines corresponding to human proteins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#extracting-the-uniprot-identifiers">Extracting the UniProt identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#using-redirection-to-create-an-output-file">Using redirection to create an output file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#viewing-the-command-history">Viewing the command history</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#clearing-the-terminal-window">Clearing the terminal window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#copying-and-renaming-files">Copying and renaming files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#removing-files-and-directories">Removing files and directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Structuring and storing data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-persistence">Data persistence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-beauty-of-plain-text-files">The beauty of plain text files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#useful-plain-text-file-formats">Useful plain text file formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tidy-data">Tidy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#find-a-good-text-editor-and-learn-how-to-use-it">Find a good text editor and learn how to use it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="keeping-track-of-your-work.html">Keeping track of your work</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#what-is-git">What is Git?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#first-time-configuration-of-git">First time configuration of Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#initialise-the-project">Initialise the project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#create-a-script-for-downloading-the-swissprot-fasta-file">Create a script for downloading the SwissProt FASTA file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#improve-script-for-downloading-swissprot-fasta-file">Improve script for downloading SwissProt FASTA file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#create-script-for-counting-the-number-of-proteins-in-a-genome">Create script for counting the number of proteins in a genome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#more-useful-git-commands">More useful git commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-analysis.html">Data analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#what-is-python">What is Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#using-python-in-interactive-mode">Using Python in interactive mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#determining-the-gc-count-of-a-sequence">Determining the GC count of a sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-reusable-functions">Creating reusable functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#list-slicing">List slicing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#loops">Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-a-sliding-window-gc-content-function">Creating a sliding window GC-content function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#downloading-the-genome">Downloading the genome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#reading-and-writing-files">Reading and writing files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-a-function-for-reading-in-the-streptomyces-sequence">Creating a function for reading in the <em>Streptomyces</em> sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#writing-out-the-sliding-window-analysis">Writing out the sliding window analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-visualisation.html">Data visualisation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#starting-r-and-loading-the-iris-flower-data-set">Starting R and loading the Iris flower data set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#understanding-the-structure-of-the-iris-data-set">Understanding the structure of the <code class="docutils literal"><span class="pre">iris</span></code> data set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#a-note-on-statistics-in-r">A note on statistics in R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#default-plotting-in-r">Default plotting in R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#installing-the-ggplot2-package">Installing the ggplot2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#loading-the-ggplot2-package">Loading the ggplot2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#plotting-using-ggplot2">Plotting using ggplot2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#available-geoms">Available «&nbsp;Geoms&nbsp;»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#scripting-data-visualisation">Scripting data visualisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#faceting">Faceting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#adding-more-colour">Adding more colour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#purpose-of-data-visualisation">Purpose of data visualisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#conveying-a-message-to-an-audience">Conveying a message to an audience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#writing-a-caption">Writing a caption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#other-useful-tools-for-scripting-the-generation-of-figures">Other useful tools for scripting the generation of figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collaborating-on-projects.html">Collaborating on projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#find-a-friend">Find a friend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#get-a-github-or-bitbucket-account">Get a GitHub or BitBucket account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#pushing-the-project-to-a-remote-server">Pushing the project to a remote server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#collaboration-using-git">Collaboration using Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#working-in-parallel">Working in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#resolving-conflicts">Resolving conflicts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="creating-scientific-documents.html">Creating scientific documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#starting-the-manuscript">Starting the manuscript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#converting-the-document-to-html-using-pandoc">Converting the document to HTML using pandoc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#adding-a-figure">Adding a figure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#converting-the-document-to-pdf">Converting the document to PDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#reference-management">Reference management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#adding-meta-data">Adding meta data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#benefits-of-using-pandoc-and-plain-text-files">Benefits of using Pandoc and plain text files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#alternative-plain-text-approaches">Alternative plain text approaches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#using-non-plain-text-file-formats">Using non-plain text file formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="automation-is-your-friend.html">Automation is your friend</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="automation-is-your-friend.html#introduction-to-make">Introduction to <code class="docutils literal"><span class="pre">make</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation-is-your-friend.html#creating-a-makefile">Creating a <code class="docutils literal"><span class="pre">Makefile</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation-is-your-friend.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="practical-problem-solving.html">Practical problem solving</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#stop-and-think">Stop and think</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#measuring-success">Measuring success</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#more-string-processing">More string processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#extracting-the-organism-name">Extracting the organism name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#only-running-tests-when-the-module-is-called-directly">Only running tests when the module is called directly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#counting-the-number-of-unique-organisms">Counting the number of unique organisms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#finding-the-number-of-variants-per-species-and-the-number-of-proteins-per-variant">Finding the number of variants per species and the number of proteins per variant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="working-remotely.html">Working remotely</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#jargon-busting">Jargon busting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#logging-in-using-the-secure-shell-protocol">Logging in using the Secure Shell protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#copying-files-using-secure-copy">Copying files using Secure Copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#password-less-authentication-using-ssh-keys">Password-less authentication using SSH keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#managing-your-login-details-using-ssh-config">Managing your login details using SSH config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#executing-long-running-commands-on-remote-hosts">Executing long running commands on remote hosts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="managing-your-system.html">Managing your system</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-file-system">The file system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-path-environment-variable">The <code class="docutils literal"><span class="pre">PATH</span></code> environment variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-root-user">The <code class="docutils literal"><span class="pre">root</span></code> user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#using-package-managers">Using package managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#compiling-software-from-source">Compiling software from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-python-packages">Installing Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-r-packages">Installing R packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-perl-modules">Installing Perl modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-latex-packages">Installing Latex packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#automated-provisioning">Automated provisioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="next-steps.html">Next steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#apply-what-you-have-learnt">Apply what you have learnt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#be-social">Be social</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#recommended-reading">Recommended reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Structuring and storing data</a><ul>
+<li><a class="reference internal" href="#data-structures">Data structures</a></li>
+<li><a class="reference internal" href="#data-persistence">Data persistence</a></li>
+<li><a class="reference internal" href="#the-beauty-of-plain-text-files">The beauty of plain text files</a></li>
+<li><a class="reference internal" href="#useful-plain-text-file-formats">Useful plain text file formats</a></li>
+<li><a class="reference internal" href="#tidy-data">Tidy data</a></li>
+<li><a class="reference internal" href="#find-a-good-text-editor-and-learn-how-to-use-it">Find a good text editor and learn how to use it</a></li>
+<li><a class="reference internal" href="#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="structuring-and-storing-data">
+<h1>Structuring and storing data</h1>
+<p>The biological sciences are becoming more and more data driven.
+However, dealing with large volumes of data can feel overwhelming.
+One way to regain some control is to ensure that there is some structure to
+the data. This chapter introduces important data structures and file formats
+for representing them.</p>
+<div class="section" id="data-structures">
+<h2>Data structures</h2>
+<p>In <a class="reference internal" href="how-to-think-like-a-computer.html"><span class="doc">How to think like a computer</span></a> we introduced some basic data types,
+including integers, floating point numbers, characters and strings. However,
+most of the time we are not interested in individual instances of integers or
+floating point values, we want to analyse lots of data points, often of a
+heterogeneous nature.</p>
+<p>We need some way of structuring our data. In computing there are several well
+defined data structures for accomplishing this. Three data structures of particular
+interest are lists, dictionaries and graphs. Lists and dictionaries are generally
+useful and graphs are of particular interest in biology and chemistry.</p>
+<p>A list, also known as an array, is basically a collection of elements in a
+specific order. The most common use case is to simply go through all the
+elements in a list and do something with them. For example if you had a stack
+of Petri dishes you might go through them, one-by-one, and only keep the ones
+that had single colonies suitable for picking.  This is similar to what we did
+with the FASTA file in <a class="reference internal" href="first-steps-towards-automation.html"><span class="doc">First steps towards automation</span></a>, where we only
+retained the lines contain the expression «&nbsp;OS=Homo sapiens&nbsp;».</p>
+<p>Because lists have an order associated with them they can also be used to
+implement different types of queuing behaviour such as «&nbsp;first-in-first-out&nbsp;» and
+«&nbsp;first-in-last-out&nbsp;». Furthermore, individual elements can usually be accessed
+through their numerical indices. This also means that you can sort lists. For
+example you could stack your Petri dishes based on the number of colonies in
+each one. Below is some pseudo code illustrating how a bunch of petri dish
+identifiers could be stored as a list.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">petri_dishes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;wt_control&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;wt_treated&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;mutant1_control&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;mutant1_treated&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;mutant2_control&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;mutant2_treated&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>In Python one can access the third element (<code class="docutils literal"><span class="pre">&quot;mutant1_control&quot;</span></code>) using the syntax <code class="docutils literal"><span class="pre">petri_dishes[2]</span></code>.
+Note that index used is 2, rather than 3.
+This is because Python uses zero-based indexing, i.e. the first element of
+the list would be accessed using index zero, the third element therefore
+has index two.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Zero vs one-based indexing</p>
+<p class="last">In many programming languages (C, C++, JavaScript, Perl, Python, to name a
+few) lists use a zero-based indexing scheme. In other words the first element
+of the list is accessed using the index 0, the second using index 1, etc.
+However, be warned, this is by no means a universal rule as many languages use
+a one-based indexing scheme, example include Awk, Fortran, Mathematica, Matlab.</p>
+</div>
+<p>A dictionary, also known as a map or an associative array, is an unordered
+collection of elements that can be accessed through their associated
+identifiers. In other words each entry in a dictionary has a key, the
+identifier, and a value. For example, suppose that you needed to store
+information about the speed of various animals. In this
+case it would make a lot of sense to have a system where you could look up the
+speed information based on the animal’s name.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">animal_speed</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cheeta&quot;</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span>
+                <span class="s2">&quot;ostrich&quot;</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span>
+                <span class="s2">&quot;cat&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+                <span class="s2">&quot;antelope&quot;</span><span class="p">:</span> <span class="mi">88</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>In Python one could look up the speed of an ostrich using the syntax
+<code class="docutils literal"><span class="pre">animal_speed[&quot;ostrich&quot;]</span></code>.</p>
+<p>It is worth noting that it is possible to create nested data structures. For
+example, think of a spreadsheet. The spreadsheet could be represented as a list
+containing lists. In other words the elements of the outer list would represent
+the rows in the spreadsheet and the elements in an inner list would represent
+values of cells at different columns for a specific row.</p>
+<p>Let’s illustrate this using the table below.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="38%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Time</th>
+<th class="head">Height</th>
+<th class="head">Weight</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr class="row-even"><td>10</td>
+<td>7</td>
+<td>12</td>
+</tr>
+<tr class="row-odd"><td>15</td>
+<td>8</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p>The table, excluding the header, could be represented using a list of lists.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">5</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">5</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">20</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>A graph, sometimes known as a tree, is a data structure that links nodes together
+via edges (<a class="reference internal" href="#phylogenetic-tree-and-aspirin-structure"><span class="std std-numref">Fig. 3</span></a>). This should sound relatively familiar to you as it is the basic
+concept behind phylogenetic trees. Each node represents a species and the edges
+represent the inferred evolutionary relationships between the species. Graphs are
+also used to represent 2D connectivities of molecules.</p>
+<div class="figure" id="id4">
+<span id="phylogenetic-tree-and-aspirin-structure"></span><img alt="Phylogenetic tree and aspirin structure." src="_images/graph-examples.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Two examples of graphs: a phylogentic tree (A) and the chemical structure
+of Aspirin (B). Original images via Wikimeda Commons [Public domain]
+<a class="reference external" href="https://commons.wikimedia.org/wiki/File:CollapsedtreeLabels-simplified.svg">A</a>
+and <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Aspirin-skeletal.svg">B</a>.</span></p>
+</div>
+<p>Because of their general utility lists and dictionaries are built-in to many
+high level programming languages such as Python and JavaScript. However, data
+structures for graphs are generally not.</p>
+</div>
+<div class="section" id="data-persistence">
+<h2>Data persistence</h2>
+<p>Suppose that your program has generated a phylogenetic tree and it has used
+this tree to determine that scientists and baboons are more closely related
+than expected. Result! At this point the program is about to finish. What
+should happen to the phylogenetic tree? Should it be discarded or should it
+be stored for future use? If you want to store data for future use you need to
+save the data to disk.</p>
+<p>When you want to save data to disk you have a choice: you can save the data in
+a binary format that only your program understands or you can save the data as
+a plain text file.  Storing your data in a binary format has advantages in that
+the resulting files will be smaller and they will load quicker than a plain
+text file. However, in the next section you will find out why you should
+(almost) always store your data as plain text files.</p>
+</div>
+<div class="section" id="the-beauty-of-plain-text-files">
+<h2>The beauty of plain text files</h2>
+<p>Plain text files have several advantages over binary format files. First of all
+you can open and edit them on any computer.  The operating system does not
+matter as ASCII and Unicode are universal standards.  With the slight caveat
+that you may occasionally have to deal with converting between Windows and Unix
+line endings (as discussed earlier in <a class="reference internal" href="how-to-think-like-a-computer.html"><span class="doc">How to think like a computer</span></a>).</p>
+<p>Furthermore, they are easy to use. You can simply open them in your text editor
+of choice and start typing away.</p>
+<p>Some software companies try to employ a lock-in strategy where their software
+produces files in a proprietary, binary format. Meaning that you need access to
+the software in order to open the files produced using it.  This is not great
+from the users point of view. It makes it difficult to use other tools to
+further analyse the data.  It also makes it hard to share data with people that
+do not have a licence to the software in question. Making use of plain text
+files and software that can output data in plain text works around this
+problem.</p>
+<p>Finally, there is a rich ecosystem of tools available for working with plain
+text files.  Apart from text editors, there are all of the Unix command line
+tools. We looked at some of these in <a class="reference internal" href="first-steps-towards-automation.html"><span class="doc">First steps towards automation</span></a>.
+In the next chapter, <a class="reference internal" href="keeping-track-of-your-work.html"><span class="doc">Keeping track of your work</span></a>, we will look at a
+tool called <code class="docutils literal"><span class="pre">git</span></code> that can be used to track changes to plain text files.</p>
+</div>
+<div class="section" id="useful-plain-text-file-formats">
+<span id="id1"></span><h2>Useful plain text file formats</h2>
+<p>There are many well established file formats for representing data in plain
+text. These have arisen to solve different types of problems.</p>
+<p>Plain text files are commonly used to store notes, for example the minutes of a
+meeting or a list of ideas. When writing these types of documents one wants to
+be able to make use of headers, bullet points etc. A popular file format for
+creating such documents is <a class="reference external" href="https://daringfireball.net/projects/markdown/">markdown</a>. Markdown (MD) provides a
+simple way to add formatting such as headers and bullet lists by providing a
+set of rules of for how certain plain text constructs should be converted to
+HTML and other document formats.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span># Level 1 header
+
+## Level 2 header
+
+Here is some text in a paragraph.
+It is possible to *emphasize words with italic*.
+It is also possible to **strongly emphansize words in bold**.
+
+- First item in a bullet list
+- Second item in a bullet list
+
+1. First item in a numbered list
+2. Second item in a numbered list
+
+[Link to BBC website](www.bbc.com)
+
+![example image](path/to/example/image.png)
+</pre></div>
+</div>
+<p>Hopefully the example above is self explanatory. For more information have a
+look at the <a class="reference external" href="https://daringfireball.net/projects/markdown/syntax">official markdown syntax page</a>.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Markdown specific text editors</p>
+<p class="last">There are many markdown specific text editors available. For Mac users a good
+option is <a class="reference external" href="http://25.io/mou/">Mou</a>, for Linux (and Windows) users an option
+is <a class="reference external" href="http://www.mdcharm.com/">MDCharm</a>.</p>
+</div>
+<p>Another scenario is to record tabular data, for example the results
+of a scientific experiment. In other words the type of data you would want to
+store in a  spreadsheet. Comma Separated Value (CSV) files are ideally suited
+for this. This file format is relatively basic, values are simply separated by
+commas and the file can optionally start with a header. It is worth noting
+that you can include a comma in a value by surrounding it by double quotes. Below
+is an example of a three column CSV file containing a header and two data rows.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Last name,First name(s),Age
+Smith,Alice,34
+Smith,&quot;Bob, Carter&quot;,56
+</pre></div>
+</div>
+<p>Another scenario, when coding, is the ability to store richer data structures,
+such as lists or dictionaries, possibly nested within each other. There are two
+popular file formats for doing this <a class="reference external" href="http://www.json.org/">JavaScript Object Notation</a> (JSON) and <a class="reference external" href="http://www.yaml.org/">YAML Ain’t Markup a Language</a> (YAML).</p>
+<div class="sidebar">
+<p class="first sidebar-title">Recursive acronyms</p>
+<p class="last">You may ask yourself why the full name of YAML includes the word YAML.
+This is because programmers are fond of <a class="reference internal" href="glossary.html#term-recursion"><span class="xref std std-term">recursion</span></a>,
+procedures whose implementation call themselves.
+YAML is a so called recursive acronym, i.e. the acronym «&nbsp;calls&nbsp;» itself.
+Other famous
+recursive acronyms include GNU (GNU’s Not Unix), curl (C URL Request
+Library) and Fiji (Fiji Is Just ImageJ).</p>
+</div>
+<p>JSON was designed to be easy for machines to generate and parse and is used
+extensively in web applications as it can be directly converted to JavaScript
+objects. Below is an example of JSON representing a list of scientific discoveries, where
+each discovery contains a set of key value pairs.</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="mi">1653</span><span class="p">,</span>
+    <span class="nt">&quot;scientist&quot;</span><span class="p">:</span> <span class="s2">&quot;Robert Hooke&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;experiment&quot;</span><span class="p">:</span> <span class="s2">&quot;light microscopy&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;discovery&quot;</span><span class="p">:</span> <span class="s2">&quot;cells&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;year&quot;</span><span class="p">:</span> <span class="mi">1944</span><span class="p">,</span>
+    <span class="nt">&quot;scientist&quot;</span><span class="p">:</span> <span class="s2">&quot;Barbara McClintock&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;experiment&quot;</span><span class="p">:</span> <span class="s2">&quot;breeding maize plants for colour&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;discovery&quot;</span><span class="p">:</span> <span class="s2">&quot;jumping genes&quot;</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">What does it mean to «&nbsp;parse&nbsp;» a file?</p>
+<p class="last">Parsing basically means reading a piece of text and resolving it into syntactic
+parts. For example an English grammar parser might resolve the text «&nbsp;The large
+cat sat on the red hat&nbsp;» into nouns (cat, hat) and verbs (sat) and adjectives
+(large, red). In the context of parsing JSON and YAML files we are
+resolving the text into types such as integers and strings as well as higher
+level data structures such as lists and dictionaries.</p>
+</div>
+<p>YAML is similar to JSON in that it is a data serialisation standard. However, it
+places more focus on being human readable. Below is the same data structure
+represented using YAML.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="nn">---</span>
+  <span class="p p-Indicator">-</span>
+    <span class="l l-Scalar l-Scalar-Plain">year</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1653</span>
+    <span class="l l-Scalar l-Scalar-Plain">scientist</span><span class="p p-Indicator">:</span> <span class="s">&quot;Robert</span><span class="nv"> </span><span class="s">Hooke&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">experiment</span><span class="p p-Indicator">:</span> <span class="s">&quot;light</span><span class="nv"> </span><span class="s">microscopy&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">discovery</span><span class="p p-Indicator">:</span> <span class="s">&quot;cells&quot;</span>
+  <span class="p p-Indicator">-</span>
+    <span class="l l-Scalar l-Scalar-Plain">year</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1944</span>
+    <span class="l l-Scalar l-Scalar-Plain">scientist</span><span class="p p-Indicator">:</span> <span class="s">&quot;Barbara</span><span class="nv"> </span><span class="s">McClintock&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">experiment</span><span class="p p-Indicator">:</span> <span class="s">&quot;breeding</span><span class="nv"> </span><span class="s">maize</span><span class="nv"> </span><span class="s">plants</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">colour&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">discovery</span><span class="p p-Indicator">:</span> <span class="s">&quot;jumping</span><span class="nv"> </span><span class="s">genes&quot;</span>
+</pre></div>
+</div>
+<p>A nice feature of YAML is the ability to add comments to the data giving further explanation
+to the reader. These comments are ignored by programs parsing the files.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="nn">---</span>
+  <span class="c1"># TODO: include an entry for Anton van Leeuwenhoek here.</span>
+  <span class="p p-Indicator">-</span>
+    <span class="l l-Scalar l-Scalar-Plain">year</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1653</span>
+    <span class="l l-Scalar l-Scalar-Plain">scientist</span><span class="p p-Indicator">:</span> <span class="s">&quot;Robert</span><span class="nv"> </span><span class="s">Hooke&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">experiment</span><span class="p p-Indicator">:</span> <span class="s">&quot;light</span><span class="nv"> </span><span class="s">microscopy&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">discovery</span><span class="p p-Indicator">:</span> <span class="s">&quot;cells&quot;</span>
+  <span class="p p-Indicator">-</span>
+    <span class="l l-Scalar l-Scalar-Plain">year</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1944</span>
+    <span class="l l-Scalar l-Scalar-Plain">scientist</span><span class="p p-Indicator">:</span> <span class="s">&quot;Barbara</span><span class="nv"> </span><span class="s">McClintock&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">experiment</span><span class="p p-Indicator">:</span> <span class="s">&quot;breeding</span><span class="nv"> </span><span class="s">maize</span><span class="nv"> </span><span class="s">plants</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">colour&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">discovery</span><span class="p p-Indicator">:</span> <span class="s">&quot;jumping</span><span class="nv"> </span><span class="s">genes&quot;</span>
+</pre></div>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">Comments</p>
+<p>Comments are a common feature of most programming languages. They allow the programmer
+to explain the intention of the code and to make generic notes for future reference.</p>
+<p class="last">Comments begin with a program-specific character, or sequence of characters, in the example
+above the hash (<code class="docutils literal"><span class="pre">#</span></code>) symbol. In some languages comments require a closing
+sequence as well, for example a comment in HTML begins with <code class="docutils literal"><span class="pre">&lt;!--</span></code> and ends
+with <code class="docutils literal"><span class="pre">--&gt;</span></code>.</p>
+</div>
+<p>As scientist’s we sometimes need to be able to work with graph data, for
+example phylogenetic trees and molecules. These often have their own domain
+specific plain text file formats. For example the
+<a class="reference external" href="https://en.wikipedia.org/wiki/Newick_format">Newick format</a> is commonly
+used to store phylogenetic trees and there are a multitude of file formats
+for representing molecules including the
+<a class="reference external" href="https://en.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system">SMILES</a>,
+and
+<a class="reference external" href="https://en.wikipedia.org/wiki/Chemical_table_file">Molfile</a> file formats.</p>
+<p>A neat file format for storing and visualising generic graph data is the <a class="reference external" href="http://www.graphviz.org/content/dot-language">DOT
+language</a>. Plain text files
+written in the DOT language can be visualised using the software <a class="reference external" href="http://www.graphviz.org/">Graphviz</a>.</p>
+<p>Some figures are well suited for being stored as plain text files.
+This is the case when all the content of the graphic can be described
+as mathematical functions. These are so called vector graphics and the
+standard file format for storing them as plain text files is
+<a class="reference external" href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">Scalable Vector Graphics</a>.
+A neat feature of these types of
+images is that they can be arbitrarily scaled to different sizes without losing
+any resolution. Hence the word «&nbsp;scalable&nbsp;» in their name.</p>
+<p>However, there is another type of graphic that is ill suited to being
+represented as plain text files. These are so called raster images.  In raster
+images the graphic is represented as a grid where each grid point is set to a
+certain intensity. Common file formats include PNG, JPEG, and GIF.  If you are
+dealing with photographs or microscopy images the raw data will be recorded in
+raster form. The reason for storing these types of images as binary blobs,
+rather than plain text files, is that it saves a significant amount of disk
+space. Furthermore, image viewers can load these binary blobs much quicker than
+they could load the same amount of information stored as a plain text file.</p>
+<p>However, suppose you needed to generate a figure as a raster image,
+say for example a scatter plot.  Then you should consider writing a script to
+generate the figure. The instructions for generating the figure, i.e. the
+script, can then be stored as a plain text file. This concept will
+be explored in <a class="reference internal" href="data-visualisation.html"><span class="doc">Data visualisation</span></a>.</p>
+</div>
+<div class="section" id="tidy-data">
+<span id="id2"></span><h2>Tidy data</h2>
+<p>In the <a class="reference internal" href="data-visualisation.html"><span class="doc">Data visualisation</span></a> chapter we will make use of the ggplot2 package.
+This requires data to be structured as
+<a class="reference external" href="http://vita.had.co.nz/papers/tidy-data.pdf">Tidy Data</a>,
+where each variable is a column and each observation is a row and each type of
+observational unit forms a table.</p>
+<p>Take for example the table below.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="28%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&#160;</th>
+<th class="head">Control</th>
+<th class="head">Heat shock</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Wild type</td>
+<td>3</td>
+<td>15</td>
+</tr>
+<tr class="row-odd"><td>Mutant</td>
+<td>5</td>
+<td>16</td>
+</tr>
+</tbody>
+</table>
+<p>This data would be classified as «&nbsp;messy&nbsp;» because each row contains two observations,
+i.e. the control and the heat shock experiments. To reorganise the data so that it
+becomes tidy we need to «&nbsp;melt&nbsp;» or stack it.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="40%" />
+<col width="24%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Variant</th>
+<th class="head">Experiment</th>
+<th class="head">Result</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Wild type</td>
+<td>Control</td>
+<td>3</td>
+</tr>
+<tr class="row-odd"><td>Wild type</td>
+<td>Heat shock</td>
+<td>15</td>
+</tr>
+<tr class="row-even"><td>Mutant</td>
+<td>Control</td>
+<td>5</td>
+</tr>
+<tr class="row-odd"><td>Mutant</td>
+<td>Heat shock</td>
+<td>16</td>
+</tr>
+</tbody>
+</table>
+<p>The benefit of structuring your data in a tidy fashion is that it makes it easier
+to work with when you want to visualise and analyse it.</p>
+</div>
+<div class="section" id="find-a-good-text-editor-and-learn-how-to-use-it">
+<h2>Find a good text editor and learn how to use it</h2>
+<p>A key step to boost your productivity is to find a text editor that suits you, and
+learning how to make the most of it.</p>
+<p>Popular text editors include <a class="reference external" href="http://www.sublimetext.com/">Sublime Text</a>,
+<a class="reference external" href="http://www.geany.org/Main/HomePage">Geany</a> and <a class="reference external" href="https://atom.io/">Atom</a>.
+I would recommend trying out at least two of them and doing some of your own
+research into text editors. Editing text files will be a core activity throughout
+the rest of this book and you want to be working with a text editor that makes
+you happy!</p>
+<p>If you enjoy working on the command line I would highly recommend experimenting
+with command line text editors. Popular choices include <a class="reference external" href="http://www.nano-editor.org/">nano</a>, <a class="reference external" href="https://www.gnu.org/software/emacs/">emacs</a>
+and <a class="reference external" href="http://www.vim.org/">vim</a>. The former is easy to learn, whereas the latter
+two give much more power, but are more difficult to learn.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Vim is great!</p>
+<p>Personally, I use <code class="docutils literal"><span class="pre">vim</span></code> for everything. It is one of a few editors that
+is installed by default on most Unix based system. Furthermore, it is
+extremely powerful and allows you to do everything using the keyboard. I
+like this because using the mouse for extended periods of time makes my
+index finger hurt.</p>
+<p class="last">If you have half an hour to spare I highly recommend that you try running
+the <code class="docutils literal"><span class="pre">vimtutor</span></code> command in a terminal.</p>
+</div>
+</div>
+<div class="section" id="key-concepts">
+<h2>Key concepts</h2>
+<ul class="simple">
+<li>Lists, also known as arrays, are ordered collections of elements</li>
+<li>Dictionaries, also known as maps and associative arrays, are unordered
+collections of key-value pairs</li>
+<li>Graphs, sometimes known as trees, links nodes via edges and are of relevance to
+phylogenetic trees and molecular representations</li>
+<li>In computing persistence refers to data outliving the program that generated
+it</li>
+<li>If you want any data structures that you have generated to persist you need
+to write them to disk</li>
+<li>Saving your data as plain text files is almost always preferable to saving it
+as a binary <a class="reference internal" href="glossary.html#term-blob"><span class="xref std std-term">blob</span></a></li>
+<li>There are a number of useful plain text file formats for you to make use of</li>
+<li>Don’t invent your own file format</li>
+<li>Structuring your data in a «&nbsp;tidy&nbsp;» fashion will make it easier to analyse
+and visualise</li>
+<li>Learn how to make the most out of your text editor of choice</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, otu.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

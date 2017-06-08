@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Creating scientific documents &#8212; test</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/yeti/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.10.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/canopee_ico.ico"/>
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Automation is your friend" href="automation-is-your-friend.html" />
+    <link rel="prev" title="Collaborating on projects" href="collaborating-on-projects.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          test</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Yo!test <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#who-should-read-this-book">Who should read this book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#licence">Licence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#source-code">Source code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting-some-motivation.html">Getting some motivation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting-some-motivation.html#why-you-should-care-about-computing-and-coding">Why you should care about computing and coding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-some-motivation.html#what-you-can-expect-to-learn-here">What you can expect to learn here</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-think-like-a-computer.html">How to think like a computer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#binary-bits-and-bytes">Binary, bits and bytes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#character-encodings">Character encodings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#real-numbers">Real numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#boolean-logic">Boolean logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#the-microprocessor">The microprocessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#computer-memory">Computer memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="first-steps-towards-automation.html">First steps towards automation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#first-things-first-how-to-find-help">First things first, how to find help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#creating-a-new-directory-for-our-project">Creating a new directory for our project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#downloading-the-swiss-prot-knowledge-base">Downloading the Swiss-Prot knowledge base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#creating-a-work-flow-using-pipes">Creating a work flow using pipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#examining-files-without-modifying-them">Examining files, without modifying them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#finding-fasta-identifier-lines-corresponding-to-human-proteins">Finding FASTA identifier lines corresponding to human proteins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#extracting-the-uniprot-identifiers">Extracting the UniProt identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#using-redirection-to-create-an-output-file">Using redirection to create an output file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#viewing-the-command-history">Viewing the command history</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#clearing-the-terminal-window">Clearing the terminal window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#copying-and-renaming-files">Copying and renaming files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#removing-files-and-directories">Removing files and directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="structuring-and-storing-data.html">Structuring and storing data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#data-persistence">Data persistence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#the-beauty-of-plain-text-files">The beauty of plain text files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#useful-plain-text-file-formats">Useful plain text file formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#tidy-data">Tidy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#find-a-good-text-editor-and-learn-how-to-use-it">Find a good text editor and learn how to use it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="keeping-track-of-your-work.html">Keeping track of your work</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#what-is-git">What is Git?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#first-time-configuration-of-git">First time configuration of Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#initialise-the-project">Initialise the project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#create-a-script-for-downloading-the-swissprot-fasta-file">Create a script for downloading the SwissProt FASTA file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#improve-script-for-downloading-swissprot-fasta-file">Improve script for downloading SwissProt FASTA file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#create-script-for-counting-the-number-of-proteins-in-a-genome">Create script for counting the number of proteins in a genome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#more-useful-git-commands">More useful git commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-analysis.html">Data analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#what-is-python">What is Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#using-python-in-interactive-mode">Using Python in interactive mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#determining-the-gc-count-of-a-sequence">Determining the GC count of a sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-reusable-functions">Creating reusable functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#list-slicing">List slicing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#loops">Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-a-sliding-window-gc-content-function">Creating a sliding window GC-content function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#downloading-the-genome">Downloading the genome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#reading-and-writing-files">Reading and writing files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-a-function-for-reading-in-the-streptomyces-sequence">Creating a function for reading in the <em>Streptomyces</em> sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#writing-out-the-sliding-window-analysis">Writing out the sliding window analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-visualisation.html">Data visualisation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#starting-r-and-loading-the-iris-flower-data-set">Starting R and loading the Iris flower data set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#understanding-the-structure-of-the-iris-data-set">Understanding the structure of the <code class="docutils literal"><span class="pre">iris</span></code> data set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#a-note-on-statistics-in-r">A note on statistics in R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#default-plotting-in-r">Default plotting in R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#installing-the-ggplot2-package">Installing the ggplot2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#loading-the-ggplot2-package">Loading the ggplot2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#plotting-using-ggplot2">Plotting using ggplot2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#available-geoms">Available «&nbsp;Geoms&nbsp;»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#scripting-data-visualisation">Scripting data visualisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#faceting">Faceting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#adding-more-colour">Adding more colour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#purpose-of-data-visualisation">Purpose of data visualisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#conveying-a-message-to-an-audience">Conveying a message to an audience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#writing-a-caption">Writing a caption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#other-useful-tools-for-scripting-the-generation-of-figures">Other useful tools for scripting the generation of figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collaborating-on-projects.html">Collaborating on projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#find-a-friend">Find a friend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#get-a-github-or-bitbucket-account">Get a GitHub or BitBucket account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#pushing-the-project-to-a-remote-server">Pushing the project to a remote server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#collaboration-using-git">Collaboration using Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#working-in-parallel">Working in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#resolving-conflicts">Resolving conflicts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating scientific documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#starting-the-manuscript">Starting the manuscript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#converting-the-document-to-html-using-pandoc">Converting the document to HTML using pandoc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-a-figure">Adding a figure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#converting-the-document-to-pdf">Converting the document to PDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reference-management">Reference management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-meta-data">Adding meta data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#benefits-of-using-pandoc-and-plain-text-files">Benefits of using Pandoc and plain text files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#alternative-plain-text-approaches">Alternative plain text approaches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-non-plain-text-file-formats">Using non-plain text file formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="automation-is-your-friend.html">Automation is your friend</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="automation-is-your-friend.html#introduction-to-make">Introduction to <code class="docutils literal"><span class="pre">make</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation-is-your-friend.html#creating-a-makefile">Creating a <code class="docutils literal"><span class="pre">Makefile</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation-is-your-friend.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="practical-problem-solving.html">Practical problem solving</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#stop-and-think">Stop and think</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#measuring-success">Measuring success</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#more-string-processing">More string processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#extracting-the-organism-name">Extracting the organism name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#only-running-tests-when-the-module-is-called-directly">Only running tests when the module is called directly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#counting-the-number-of-unique-organisms">Counting the number of unique organisms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#finding-the-number-of-variants-per-species-and-the-number-of-proteins-per-variant">Finding the number of variants per species and the number of proteins per variant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="working-remotely.html">Working remotely</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#jargon-busting">Jargon busting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#logging-in-using-the-secure-shell-protocol">Logging in using the Secure Shell protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#copying-files-using-secure-copy">Copying files using Secure Copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#password-less-authentication-using-ssh-keys">Password-less authentication using SSH keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#managing-your-login-details-using-ssh-config">Managing your login details using SSH config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#executing-long-running-commands-on-remote-hosts">Executing long running commands on remote hosts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="managing-your-system.html">Managing your system</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-file-system">The file system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-path-environment-variable">The <code class="docutils literal"><span class="pre">PATH</span></code> environment variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-root-user">The <code class="docutils literal"><span class="pre">root</span></code> user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#using-package-managers">Using package managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#compiling-software-from-source">Compiling software from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-python-packages">Installing Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-r-packages">Installing R packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-perl-modules">Installing Perl modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-latex-packages">Installing Latex packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#automated-provisioning">Automated provisioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="next-steps.html">Next steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#apply-what-you-have-learnt">Apply what you have learnt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#be-social">Be social</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#recommended-reading">Recommended reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Creating scientific documents</a><ul>
+<li><a class="reference internal" href="#starting-the-manuscript">Starting the manuscript</a></li>
+<li><a class="reference internal" href="#converting-the-document-to-html-using-pandoc">Converting the document to HTML using pandoc</a></li>
+<li><a class="reference internal" href="#adding-a-figure">Adding a figure</a></li>
+<li><a class="reference internal" href="#converting-the-document-to-pdf">Converting the document to PDF</a></li>
+<li><a class="reference internal" href="#reference-management">Reference management</a></li>
+<li><a class="reference internal" href="#adding-meta-data">Adding meta data</a></li>
+<li><a class="reference internal" href="#benefits-of-using-pandoc-and-plain-text-files">Benefits of using Pandoc and plain text files</a></li>
+<li><a class="reference internal" href="#alternative-plain-text-approaches">Alternative plain text approaches</a></li>
+<li><a class="reference internal" href="#using-non-plain-text-file-formats">Using non-plain text file formats</a></li>
+<li><a class="reference internal" href="#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="creating-scientific-documents">
+<h1>Creating scientific documents</h1>
+<p>Communication forms an important part of the scientific process.
+In <a class="reference internal" href="collaborating-on-projects.html"><span class="doc">Collaborating on projects</span></a> we added a <code class="docutils literal"><span class="pre">README.md</span></code> file
+describing the purpose of the project and how to perform the
+analysis. This is a good thing. However it may not be clear how
+this process can be extended to produce scientific documents
+with figures, equations and reference management. In this chapter
+we will learn how to do this.</p>
+<div class="section" id="starting-the-manuscript">
+<h2>Starting the manuscript</h2>
+<p>Here we will build on the work from
+<a class="reference internal" href="data-analysis.html"><span class="doc">Data analysis</span></a>, <a class="reference internal" href="data-visualisation.html"><span class="doc">Data visualisation</span></a> and
+<a class="reference internal" href="collaborating-on-projects.html"><span class="doc">Collaborating on projects</span></a> chapters. Let’s start by
+going into the <code class="docutils literal"><span class="pre">S.coelicolor-local-GC-content</span></code> directory.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ cd S.coelicolor-local-GC-content
+</pre></div>
+</div>
+<p>Now use your favorite text editor to add the text below to
+a file named <code class="docutils literal"><span class="pre">manuscipt.md</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>## Introduction
+
+*Streptomyces coelicolor* is a bacteria that can produce a range of natural
+products of pharmaceutical relevance.
+
+In 2002 the genome of *S. coelicolor*  A3(2), the model actinomycete
+organism, was sequenced.  In this study we investigate the local GC content
+of this organism.
+
+
+## Methodology
+
+The genome of *S. coelicolor*  A3(2) was downloaded from the Sanger Centre
+ftp site.
+
+The local GC content was then calculated using a sliding window of 100 KB
+and a 50 KB step size.
+
+
+## Results
+
+The mean of the local GC content is 72.1% with a standard deviation of 1.1.
+
+
+## Conclusion
+
+There is little variation in the local GC content of *S. coelicolor* A3(2).
+</pre></div>
+</div>
+<p>The manuscript above won’t make it into Nature, but it will do for
+us to illustrate how to build up a manuscript using plain text files.</p>
+<p>In terms of the markdown syntax the two hashes <code class="docutils literal"><span class="pre">##</span></code> are used to mark level 2
+headings and the words surrounded by asterisk symbols (<code class="docutils literal"><span class="pre">*</span></code>) will be
+emphasized using italic font.</p>
+</div>
+<div class="section" id="converting-the-document-to-html-using-pandoc">
+<h2>Converting the document to HTML using pandoc</h2>
+<p>Markdown is a lightweight syntax that can easily be converted to HTML.
+Here we will use of the tool <a class="reference external" href="http://pandoc.org/">Pandoc</a> to convert the
+markdown document to HTML.</p>
+<p>First of all you will need to install Pandoc. Generic information on how to
+install software can be found in <a class="reference internal" href="managing-your-system.html"><span class="doc">Managing your system</span></a>. On a Mac
+you can use Homebrew and on Linux based systems it should be available
+for install using the distributions package manager. For more detail have
+a look at the <a class="reference external" href="http://pandoc.org/installing.html">Pandoc installation notes</a>.</p>
+<p>Now that we have installed Pandoc, let’s use it to convert our <code class="docutils literal"><span class="pre">manuscript.md</span></code>
+file to a standalone HTML file.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ pandoc -f markdown -t html -s manuscript.md &gt; manuscript.html
+</pre></div>
+</div>
+<p>In the above the <code class="docutils literal"><span class="pre">-f</span> <span class="pre">markdown</span></code> option means <em>from markdown</em> and the <code class="docutils literal"><span class="pre">-t</span>
+<span class="pre">html</span></code> option means <em>to html</em>. The <code class="docutils literal"><span class="pre">-s</span></code> option means <em>standalone</em>, i.e.
+encapsulate the content with appropriate appropriate headers and footers.</p>
+<p>Pandoc writes to the standard output stream so we redirect it (<code class="docutils literal"><span class="pre">&gt;</span></code>) to a file
+named <code class="docutils literal"><span class="pre">manuscript.html</span></code>. Have a look at the <code class="docutils literal"><span class="pre">manuscript.html</span></code> file
+using a web browser.</p>
+<p>Alternatively, we could have used the <code class="docutils literal"><span class="pre">-o</span></code> option to specify the name
+of an output file. The command below produces the same outcome as the
+previous command.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ pandoc -f markdown -t html -s manuscript.md -o manuscript.html
+</pre></div>
+</div>
+<p>Now use a web browser to view the generated <code class="docutils literal"><span class="pre">manuscript.html</span></code> file.</p>
+</div>
+<div class="section" id="adding-a-figure">
+<h2>Adding a figure</h2>
+<p>At this point it would be good to add the figure produced in
+<a class="reference internal" href="data-visualisation.html"><span class="doc">Data visualisation</span></a> to the «&nbsp;Results&nbsp;» section of the manuscript.</p>
+<p>In markdown images can be added using the syntax below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>![Alternative text](path/to/image.png)
+</pre></div>
+</div>
+<p>In HTML the intention of the alternative text (the «&nbsp;alt&nbsp;» attribute) is to
+provide a descriptive text in case the image cannot be displayed for some
+reason. Pandoc makes use of the alternative text attribute to create
+a caption for the image.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>## Results
+
+The mean of the local GC content is 72.1% with a standard deviation of 1.1.
+
+<span class="hll">![**Variation in the local GC content of *S. coelicolor* A3(2).** Using a
+</span><span class="hll">window size of 100 KB and a step size of 50 KB the local GC content has a
+</span><span class="hll">mean of 72.1% and a standard deviation of 1.1.](local_gc_content.png)
+</span></pre></div>
+</div>
+<p>In the above the double asterix (<code class="docutils literal"><span class="pre">**</span></code>) is used as markup for bold text.
+This will serve as a title for the figure caption.</p>
+<p>Now we can build the document again.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ pandoc -f markdown -t html -s manuscript.md -o manuscript.html
+</pre></div>
+</div>
+</div>
+<div class="section" id="converting-the-document-to-pdf">
+<h2>Converting the document to PDF</h2>
+<p>HTML is great for websites. However, scientific documents tend to be read as
+PDF. Let us use Pandoc to convert our document to PDF.</p>
+<p>However, before we can do this we need to install
+<a class="reference external" href="https://www.latex-project.org">LaTeX</a>. On Mac install
+<a class="reference external" href="http://www.tug.org/mactex">MacTeX</a>. On Linux use you package manager
+to install LaTeX, possibly known as «&nbsp;TeX Live&nbsp;». See the
+section on <a class="reference external" href="https://latex-project.org/ftp.html">Obtaining LaTeX</a> on
+the LaTeX project website for more information.</p>
+<p>Now that you have installed LaTeX you can convert the <code class="docutils literal"><span class="pre">manuscript.md</span></code>
+markdown file to PDF using the command below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ pandoc -f markdown -t latex -s manuscript.md -o manuscript.pdf
+</pre></div>
+</div>
+<p>In the above we use the <code class="docutils literal"><span class="pre">-t</span> <span class="pre">latex</span></code> option to specify that the
+<code class="docutils literal"><span class="pre">manuscript.pdf</span></code> output file should be built using LaTeX.</p>
+</div>
+<div class="section" id="reference-management">
+<h2>Reference management</h2>
+<p>Reference management is a particularly prominent feature of scientific
+writing. Let us therefore look at how we can include references to
+websites and papers in our document.</p>
+<p>Let’s start by creating a bibliography file. Copy and paste the
+content below into a file named <code class="docutils literal"><span class="pre">references.bib</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>@online{S.coelicolor-genome,
+title={{S. coelicolor genome}},
+url={ftp://ftp.sanger.ac.uk/pub/project/pathogens/S_coelicolor/whole_genome/},
+urldate={2016-07-10}
+}
+</pre></div>
+</div>
+<p>This is a so called BibTex record. In this particular case it is a BibTex record for
+an online resource, as indicated by the <code class="docutils literal"><span class="pre">&#64;online</span></code> type. You would also use the
+<code class="docutils literal"><span class="pre">&#64;online</span></code> type to reference web pages.</p>
+<p>The text <code class="docutils literal"><span class="pre">S.coelicolor-genome</span></code> is the «&nbsp;key&nbsp;» assigned to this record. The key could
+have been called anything as long as it is unique. This key will be used within our
+document when citing this record.</p>
+<p>Now append the text below to the bottom of the <code class="docutils literal"><span class="pre">references.bib</span></code> file.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>@article{Bentley2002,
+title={Complete genome sequence of the model actinomycete
+       Streptomyces coelicolor A3 (2)},
+author={Bentley, Stephen D and Chater, Keith F and Cerdeno-Tarraga, A-M and
+        Challis, Greg L and Thomson, NR and James, Keith D and
+        Harris, David E and Quail, Michael A and Kieser, H and
+        Harper, David and others},
+journal={Nature},
+volume={417},
+number={6885},
+pages={141--147},
+year={2002},
+publisher={Nature Publishing Group}
+}
+</pre></div>
+</div>
+<p>Do not type in BibTex records by hand. The entire <code class="docutils literal"><span class="pre">Bentley2002</span></code>
+record was copied and pasted from <a class="reference external" href="https://scholar.google.co.uk/">Google Scholar</a>.
+Note that in the record above the identifier was changed from <code class="docutils literal"><span class="pre">bentley2002complete</span></code>
+(key used by Google Scholar) to <code class="docutils literal"><span class="pre">Bentley2002</span></code>.</p>
+<p>References managers such as <a class="reference external" href="https://www.mendeley.com">Mendeley</a> and <a class="reference external" href="https://www.zotero.org/">Zotero</a> can also be used to export BibTex records. More
+suggestions on how to access BitTex records can be found on the
+<a class="reference external" href="http://tex.stackexchange.com/a/207">Tex StackExchange</a> site.</p>
+<p>Now let’s add some references to our <code class="docutils literal"><span class="pre">manuscript.md</span></code> file.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>## Introduction
+
+*Streptomyces coelicolor* is a bacteria that can produce a range of natural
+products of pharmaceutical relevance.
+
+In 2002 the genome of *S. coelicolor*  A3(2), the model actinomycete
+<span class="hll">organism, was sequenced [@Bentley2002].
+</span>
+In this study we investigate the local GC content of this organism.
+
+
+## Methodology
+
+The genome of *S. coelicolor*  A3(2) was downloaded from the Sanger Centre
+<span class="hll">ftp site [@S.coelicolor-genome].
+</span></pre></div>
+</div>
+<p>Now we can add referenes using Pandoc’s built in <code class="docutils literal"><span class="pre">pandoc-citeproc</span></code>
+filter.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ pandoc -f markdown -t latex -s manuscript.md -o manuscript.pdf   \
+  --filter pandoc-citeproc --bibliography=references.bib
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">--filter</span> <span class="pre">pandoc-citeproc</span></code> argument results in automatically adding citations
+and a bibliography to the document. However, this requires some knowledge
+of where the bibliographic information is, this is specified using the
+<code class="docutils literal"><span class="pre">--bibliography=references.bib</span></code> argument.</p>
+<p>«&nbsp;CiteProc&nbsp;» is in fact a generic name for a program that can be used to
+produce citations and bibliographies based on formatting rules using
+the Citation Style Langauge (CSL) syntax. Zotero
+provides CSL styles for lots of journals in
+the <a class="reference external" href="https://www.zotero.org/styles">Zotero Style Repository</a>.</p>
+<p>Let’s download Zotero’s CSL file for Nature, copy and paste this text into
+a file named <code class="docutils literal"><span class="pre">nature.csl</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ curl https://www.zotero.org/styles/nature &gt; nature.csl
+</pre></div>
+</div>
+<p>We can now produce our document using Nature’s citation style.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ pandoc -f markdown -t latex -s manuscript.md -o manuscript.pdf   \
+  --filter pandoc-citeproc --bibliography=references.bib  \
+  --csl=nature.csl
+</pre></div>
+</div>
+<p>Have a look at the generated PDF file. Pretty neat right?! One thing that
+is missing is a title for the reference section. Let’s add that to the
+<code class="docutils literal"><span class="pre">manuscript.md</span></code> file.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>## Conclusion
+
+There is little variation in the local GC content of *S. coelicolor* A3(2).
+
+
+<span class="hll">## References
+</span></pre></div>
+</div>
+</div>
+<div class="section" id="adding-meta-data">
+<h2>Adding meta data</h2>
+<p>To turn this into a research article we need to add a title, authors, an
+abstract and a date. In Pandoc this can be achieved by adding meta data to the
+top of the file, using a YAML syntax (see <a class="reference internal" href="structuring-and-storing-data.html#useful-plain-text-file-formats"><span class="std std-ref">Useful plain text file formats</span></a>
+for information on YAML).</p>
+<p>Add the header below to the top of the  <code class="docutils literal"><span class="pre">manuscript.md</span></code> file.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>---
+title: &quot;*S. coelicolor* local GC content analysis&quot;
+author: Tjelvar S. G. Olsson and My Friend
+abstract: |
+  In 2002 the genome of *S. coelicolor*  A3(2), the model actinomycete
+  organism, was sequenced.
+
+  The local GC content was calculated using a sliding window of
+  100 KB and a 50 KB step size.
+
+  The mean of the local GC content was found to be 72.1% with a standard
+  deviation of 1.1. We therefore conclude that there is little variation
+  in the local GC content of *S. coelicolor* A3(2).
+date: 25 July 2016
+---
+## Introduction
+</pre></div>
+</div>
+<p>Let’s give some explanation of the meta data above.
+The YAML meta data is encapsulated using <code class="docutils literal"><span class="pre">---</span></code>. The title string is
+quoted to avoid the <code class="docutils literal"><span class="pre">*</span></code> symbols confusing Pandoc. The pipe
+symbol at the beginning of the abstract allows for multi-line input with
+newlines, note that the multi-lines must be indented.</p>
+<p>Let’s generate the document again.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ pandoc -f markdown -t latex -s manuscript.md -o manuscript.pdf   \
+  --filter pandoc-citeproc --bibliography=references.bib  \
+  --csl=nature.csl
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">manuscript.pdf</span></code> document is now looking pretty good!</p>
+<p>Anther useful feature of Pandoc’s meta data section is that we can add
+information for some of the data that we previously had to specify on
+the command line. Let’s add items for the <code class="docutils literal"><span class="pre">--bibliograpy</span></code> and
+<code class="docutils literal"><span class="pre">--csl</span></code> options (these options are in fact short hand for
+<code class="docutils literal"><span class="pre">--metadata</span> <span class="pre">bibliograpy=FILE</span></code> and <code class="docutils literal"><span class="pre">--metadata</span> <span class="pre">csl=FILE</span></code>).</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>date: 25 July 2016
+<span class="hll">bibliography: references.bib
+</span><span class="hll">csl: nature.csl
+</span>---
+## Introduction
+</pre></div>
+</div>
+<p>Now we can generate the documentation using the command below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ pandoc -f markdown -t latex -s manuscript.md -o manuscript.pdf   \
+  --filter pandoc-citeproc
+</pre></div>
+</div>
+<p>This is a good point to commit a snapshot to version control. Let’s
+look at the status of our repository first.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git status
+On branch master
+Your branch is up-to-date with &#39;origin/master&#39;.
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        bioinformatics.csl
+        manuscript.html
+        manuscript.md
+        manuscript.pdf
+        nature.csl
+        references.bib
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</pre></div>
+</div>
+<p>We have created many new files. We want to track all of them except
+<code class="docutils literal"><span class="pre">manuscript.pdf</span></code> and <code class="docutils literal"><span class="pre">manuscript.html</span></code> as they can be generated by Pandoc.
+Let us therefore update the <code class="docutils literal"><span class="pre">.gitignore</span></code> file to look like the below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span><span class="hll">manuscript.*
+</span><span class="hll">!manuscript.md
+</span>
+Sco.dna
+local_gc_content.csv
+local_gc_content.png
+</pre></div>
+</div>
+<p>In the above the first two lines are new.
+Let’s explain what they do. The first
+line states that all files starting with <code class="docutils literal"><span class="pre">manuscript.</span></code> should be ignored.
+This includes the file we want to track <code class="docutils literal"><span class="pre">manuscript.md</span></code>. On the second line
+we therefore add an exception for this file, the exclamation mark (<code class="docutils literal"><span class="pre">!</span></code>) is
+used to indicate that the <code class="docutils literal"><span class="pre">manuscript.md</span></code> should be excluded from the
+previous rule to ignore it.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git status
+On branch master
+Your branch is up-to-date with &#39;origin/master&#39;.
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+        modified:   .gitignore
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        bioinformatics.csl
+        manuscript.md
+        nature.csl
+        references.bib
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</pre></div>
+</div>
+<p>Now we can add the remaining files and commit the snapshot.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git add bioinformatics.csl manuscript.md nature.csl references.bib
+$ git commit -m &quot;Added draft manuscript&quot;
+[master 7b06d9d] Added draft manuscript
+ 4 files changed, 332 insertions(+)
+ create mode 100644 bioinformatics.csl
+ create mode 100644 manuscript.md
+ create mode 100644 nature.csl
+ create mode 100644 references.bib
+</pre></div>
+</div>
+<p>Finally, let us also add and commit the updated <code class="docutils literal"><span class="pre">.gitignore</span></code> file.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git add .gitignore
+$ git commit -m &quot;Updated gitignore to ignore generated manuscript files&quot;
+[master bea89f4] Updated gitignore to ignore generated manuscript files
+ 1 file changed, 3 insertions(+)
+</pre></div>
+</div>
+</div>
+<div class="section" id="benefits-of-using-pandoc-and-plain-text-files">
+<h2>Benefits of using Pandoc and plain text files</h2>
+<p>Why go through all this trouble to produce a PDF document?
+Would it not be easier to simply write it using a word processor
+and export it as PDF?</p>
+<p>There are three main advantages to the methodology outlined
+in this chapter.</p>
+<ol class="arabic">
+<li><p class="first">There are lots of awesome tools for working with plain text files.
+If you decide to create your manuscript using plain text files
+you can take advantage of them. Worthy of special mention is Git
+which is one of the most powerful collaboration tools in the world,
+with the added advantage of giving you unlimited undo functionality
+and a transparent audit trial.</p>
+</li>
+<li><p class="first">Automation! We will go into this more in the next chapter,
+<a class="reference internal" href="automation-is-your-friend.html"><span class="doc">Automation is your friend</span></a>. However, for now imagine that
+someone discovered that there was something wrong with the
+raw data that you had been using.  How long would it take you to
+update your manuscript? Using plain text files it is possible
+to create automated work flows to build entire documents from
+raw data.</p>
+</li>
+<li><p class="first">Ability to convert to any file format. We have already seen how you
+can covert the document to HTML. What if your collaborator really
+needs Word? No problem.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ pandoc -f markdown -t docx -s manuscript.md -o manuscript.docx  \
+  --filter pandoc-citeproc
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Incidentally, another advantage of learning to use Pandoc is that it is not
+limited in going from markdown to other formats. It can take almost any
+file format and convert it to any other file format. For example, one could
+convert the Word document we just created to TeX.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ pandoc -f docx -t latex manuscript.docx -o manuscript.tex
+</pre></div>
+</div>
+</div>
+<div class="section" id="alternative-plain-text-approaches">
+<h2>Alternative plain text approaches</h2>
+<p>There are other methods of creating scientific documents using plain text
+files.</p>
+<p>One option is to write them using the LaTeX syntax. This
+is a less intuitive than using markdown. However, it gives you a bit
+more control and flexibility.</p>
+<p>A good alternative for people that miss the benefits of a graphical user
+interface (GUI) is <a class="reference external" href="https://www.lyx.org/">LyX</a>. LyX allows you to write and
+format text using an intuitive GUI. It is different from many other word
+processing tools in that it places more focus on the structure of the document
+and less focus on the appearance. The outputs of LyX are also plain text files,
+a derivative of LaTeX files. However, LyX also has built-in functionality for
+exporting files in a variety of file formats including PDF.</p>
+</div>
+<div class="section" id="using-non-plain-text-file-formats">
+<h2>Using non-plain text file formats</h2>
+<p>This chapter has outlined how you can work with plain text file formats to
+produce scientific documents. However, many people really like using Microsoft
+Word. You might be one of these people. In this case I hope that this
+chapter has given you some food for thought. The purpose of this chapter was
+not to try to force you to change your habits, but to outline alternative
+methods.</p>
+<p>There are some disadvantages to using
+Microsoft Word. The biggest one probably being collaborative editing. You tend
+to end up with files named along the lines of <code class="docutils literal"><span class="pre">manuscript_revision3_TO_edits.docx</span></code>
+being emailed around. This is not ideal. However, on the other hand if it
+is the tool that you and/or your collaborators are familiar with it is easy
+to work with.</p>
+<p>If you and/or your collaborators do not want to use plain text files, but want
+to avoid emailing Word documents around, you may want to consider
+<a class="reference external" href="https://docs.google.com">Google Docs</a>. It is similar to Word and LyX in that
+it has a GUI. Furthermore, it has built in support for collaborative working
+and version control.</p>
+<p>For an extended discussion on the pros and cons of various ways of creating
+scientific documents I would recommend reading
+<a class="reference external" href="https://arxiv.org/abs/1609.00037">Good Enough Practices in Scientific Computing</a>.
+One of the key take home messages from this paper is for everyone
+involved to agree on the tools before starting the process of writing.</p>
+</div>
+<div class="section" id="key-concepts">
+<h2>Key concepts</h2>
+<ul class="simple">
+<li>Pandoc is a powerful tool that can be used to convert (almost) any document
+format to any other</li>
+<li>Markdown can be used to add document structure to plain text files</li>
+<li>The <code class="docutils literal"><span class="pre">pandoc-citeproc</span></code> filter can be used to add citations and a bibliography</li>
+<li>The Citation Style Language (CSL) can be used to format the citations and the bibliography</li>
+<li>You can access BibTex records from Google Scholar</li>
+<li>Mendeley and Zotero are a free reference managers that can be used to export BibTex records
+(try to avoid having to type out BibTex records by hand)</li>
+<li>Zotero provides CSL citation style files for lots and lots of journals</li>
+<li>It is possible to add YAML meta data to markdown files specifying attributes such
+as title, author and abstract</li>
+<li>Using plain text files for scientific documents allows you to make use of
+awesome tools such as Git</li>
+<li>Speak to your collaborators and agree on the tools that best suit your needs</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, otu.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

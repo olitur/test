@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Data visualisation &#8212; test</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/yeti/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.10.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/canopee_ico.ico"/>
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Collaborating on projects" href="collaborating-on-projects.html" />
+    <link rel="prev" title="Data analysis" href="data-analysis.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          test</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Yo!test <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#who-should-read-this-book">Who should read this book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#licence">Licence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#source-code">Source code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting-some-motivation.html">Getting some motivation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting-some-motivation.html#why-you-should-care-about-computing-and-coding">Why you should care about computing and coding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-some-motivation.html#what-you-can-expect-to-learn-here">What you can expect to learn here</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-think-like-a-computer.html">How to think like a computer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#binary-bits-and-bytes">Binary, bits and bytes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#character-encodings">Character encodings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#real-numbers">Real numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#boolean-logic">Boolean logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#the-microprocessor">The microprocessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#computer-memory">Computer memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="first-steps-towards-automation.html">First steps towards automation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#first-things-first-how-to-find-help">First things first, how to find help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#creating-a-new-directory-for-our-project">Creating a new directory for our project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#downloading-the-swiss-prot-knowledge-base">Downloading the Swiss-Prot knowledge base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#creating-a-work-flow-using-pipes">Creating a work flow using pipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#examining-files-without-modifying-them">Examining files, without modifying them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#finding-fasta-identifier-lines-corresponding-to-human-proteins">Finding FASTA identifier lines corresponding to human proteins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#extracting-the-uniprot-identifiers">Extracting the UniProt identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#using-redirection-to-create-an-output-file">Using redirection to create an output file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#viewing-the-command-history">Viewing the command history</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#clearing-the-terminal-window">Clearing the terminal window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#copying-and-renaming-files">Copying and renaming files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#removing-files-and-directories">Removing files and directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="structuring-and-storing-data.html">Structuring and storing data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#data-persistence">Data persistence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#the-beauty-of-plain-text-files">The beauty of plain text files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#useful-plain-text-file-formats">Useful plain text file formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#tidy-data">Tidy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#find-a-good-text-editor-and-learn-how-to-use-it">Find a good text editor and learn how to use it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="keeping-track-of-your-work.html">Keeping track of your work</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#what-is-git">What is Git?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#first-time-configuration-of-git">First time configuration of Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#initialise-the-project">Initialise the project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#create-a-script-for-downloading-the-swissprot-fasta-file">Create a script for downloading the SwissProt FASTA file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#improve-script-for-downloading-swissprot-fasta-file">Improve script for downloading SwissProt FASTA file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#create-script-for-counting-the-number-of-proteins-in-a-genome">Create script for counting the number of proteins in a genome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#more-useful-git-commands">More useful git commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keeping-track-of-your-work.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-analysis.html">Data analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#what-is-python">What is Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#using-python-in-interactive-mode">Using Python in interactive mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#determining-the-gc-count-of-a-sequence">Determining the GC count of a sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-reusable-functions">Creating reusable functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#list-slicing">List slicing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#loops">Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-a-sliding-window-gc-content-function">Creating a sliding window GC-content function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#downloading-the-genome">Downloading the genome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#reading-and-writing-files">Reading and writing files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-a-function-for-reading-in-the-streptomyces-sequence">Creating a function for reading in the <em>Streptomyces</em> sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#writing-out-the-sliding-window-analysis">Writing out the sliding window analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data visualisation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#starting-r-and-loading-the-iris-flower-data-set">Starting R and loading the Iris flower data set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#understanding-the-structure-of-the-iris-data-set">Understanding the structure of the <code class="docutils literal"><span class="pre">iris</span></code> data set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-note-on-statistics-in-r">A note on statistics in R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#default-plotting-in-r">Default plotting in R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-the-ggplot2-package">Installing the ggplot2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-the-ggplot2-package">Loading the ggplot2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plotting-using-ggplot2">Plotting using ggplot2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#available-geoms">Available «&nbsp;Geoms&nbsp;»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scripting-data-visualisation">Scripting data visualisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#faceting">Faceting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-more-colour">Adding more colour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#purpose-of-data-visualisation">Purpose of data visualisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conveying-a-message-to-an-audience">Conveying a message to an audience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#writing-a-caption">Writing a caption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-useful-tools-for-scripting-the-generation-of-figures">Other useful tools for scripting the generation of figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collaborating-on-projects.html">Collaborating on projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#find-a-friend">Find a friend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#get-a-github-or-bitbucket-account">Get a GitHub or BitBucket account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#pushing-the-project-to-a-remote-server">Pushing the project to a remote server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#collaboration-using-git">Collaboration using Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#working-in-parallel">Working in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#resolving-conflicts">Resolving conflicts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="creating-scientific-documents.html">Creating scientific documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#starting-the-manuscript">Starting the manuscript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#converting-the-document-to-html-using-pandoc">Converting the document to HTML using pandoc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#adding-a-figure">Adding a figure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#converting-the-document-to-pdf">Converting the document to PDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#reference-management">Reference management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#adding-meta-data">Adding meta data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#benefits-of-using-pandoc-and-plain-text-files">Benefits of using Pandoc and plain text files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#alternative-plain-text-approaches">Alternative plain text approaches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#using-non-plain-text-file-formats">Using non-plain text file formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="automation-is-your-friend.html">Automation is your friend</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="automation-is-your-friend.html#introduction-to-make">Introduction to <code class="docutils literal"><span class="pre">make</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation-is-your-friend.html#creating-a-makefile">Creating a <code class="docutils literal"><span class="pre">Makefile</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation-is-your-friend.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="practical-problem-solving.html">Practical problem solving</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#stop-and-think">Stop and think</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#measuring-success">Measuring success</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#more-string-processing">More string processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#extracting-the-organism-name">Extracting the organism name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#only-running-tests-when-the-module-is-called-directly">Only running tests when the module is called directly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#counting-the-number-of-unique-organisms">Counting the number of unique organisms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#finding-the-number-of-variants-per-species-and-the-number-of-proteins-per-variant">Finding the number of variants per species and the number of proteins per variant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="working-remotely.html">Working remotely</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#jargon-busting">Jargon busting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#logging-in-using-the-secure-shell-protocol">Logging in using the Secure Shell protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#copying-files-using-secure-copy">Copying files using Secure Copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#password-less-authentication-using-ssh-keys">Password-less authentication using SSH keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#managing-your-login-details-using-ssh-config">Managing your login details using SSH config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#executing-long-running-commands-on-remote-hosts">Executing long running commands on remote hosts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="managing-your-system.html">Managing your system</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-file-system">The file system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-path-environment-variable">The <code class="docutils literal"><span class="pre">PATH</span></code> environment variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-root-user">The <code class="docutils literal"><span class="pre">root</span></code> user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#using-package-managers">Using package managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#compiling-software-from-source">Compiling software from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-python-packages">Installing Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-r-packages">Installing R packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-perl-modules">Installing Perl modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-latex-packages">Installing Latex packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#automated-provisioning">Automated provisioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="next-steps.html">Next steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#apply-what-you-have-learnt">Apply what you have learnt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#be-social">Be social</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#recommended-reading">Recommended reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Data visualisation</a><ul>
+<li><a class="reference internal" href="#starting-r-and-loading-the-iris-flower-data-set">Starting R and loading the Iris flower data set</a></li>
+<li><a class="reference internal" href="#understanding-the-structure-of-the-iris-data-set">Understanding the structure of the <code class="docutils literal"><span class="pre">iris</span></code> data set</a></li>
+<li><a class="reference internal" href="#a-note-on-statistics-in-r">A note on statistics in R</a></li>
+<li><a class="reference internal" href="#default-plotting-in-r">Default plotting in R</a></li>
+<li><a class="reference internal" href="#installing-the-ggplot2-package">Installing the ggplot2 package</a></li>
+<li><a class="reference internal" href="#loading-the-ggplot2-package">Loading the ggplot2 package</a></li>
+<li><a class="reference internal" href="#plotting-using-ggplot2">Plotting using ggplot2</a></li>
+<li><a class="reference internal" href="#available-geoms">Available «&nbsp;Geoms&nbsp;»</a></li>
+<li><a class="reference internal" href="#scripting-data-visualisation">Scripting data visualisation</a></li>
+<li><a class="reference internal" href="#faceting">Faceting</a></li>
+<li><a class="reference internal" href="#adding-more-colour">Adding more colour</a></li>
+<li><a class="reference internal" href="#purpose-of-data-visualisation">Purpose of data visualisation</a></li>
+<li><a class="reference internal" href="#conveying-a-message-to-an-audience">Conveying a message to an audience</a></li>
+<li><a class="reference internal" href="#writing-a-caption">Writing a caption</a></li>
+<li><a class="reference internal" href="#other-useful-tools-for-scripting-the-generation-of-figures">Other useful tools for scripting the generation of figures</a></li>
+<li><a class="reference internal" href="#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="data-visualisation">
+<h1>Data visualisation</h1>
+<p>So far we have been learning how to crunch data. Now we will look into
+how to visualise it.</p>
+<p>There are two main purposes of representing data visually:</p>
+<ol class="arabic simple">
+<li>To explore the data</li>
+<li>To convey a message to an audience</li>
+</ol>
+<p>In this chapter we will look at how both of these can be accomplished using <a class="reference external" href="https://www.r-project.org/">R</a> and its associated <a class="reference external" href="http://ggplot2.org/">ggplot2</a>
+package. This choice is based on ggplot2 being one of the best
+plotting tools available. It is easy to use and has got sensible defaults that
+result in beautiful plots out of the box. An added advantage is that this
+gives us a means to get more familiar with R, which is an awesome tool for
+statistical computing (although this topic is beyond the scope of this book).
+Other tools will be discussed later in the section
+<a class="reference internal" href="#other-useful-tools-for-scripting-the-generation-of-figures"><span class="std std-ref">Other useful tools for scripting the generation of figures</span></a>.</p>
+<p>We will start off by exploring Fisher’s <a class="reference external" href="https://en.wikipedia.org/wiki/Iris_flower_data_set">Iris flower data set</a>. This will be an
+exercise in data exploration.</p>
+<p>Finally, we will use R and ggplot2 to build up a sliding window plot of the
+GC content data from the <a class="reference internal" href="data-analysis.html"><span class="doc">Data analysis</span></a> chapter. This will serve to
+illustrate some points to consider when trying to convey a message to an
+audience.</p>
+<div class="section" id="starting-r-and-loading-the-iris-flower-data-set">
+<h2>Starting R and loading the Iris flower data set</h2>
+<p>R like Python can be run in an interactive shell. This is a great way to
+get familiar with R. To access R’s interactive shell simply type <code class="docutils literal"><span class="pre">R</span></code> into your terminal and press enter.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ R
+
+R version 3.2.2 (2015-08-14) -- &quot;Fire Safety&quot;
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin14.5.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type &#39;license()&#39; or &#39;licence()&#39; for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type &#39;contributors()&#39; for more information and
+&#39;citation()&#39; on how to cite R or R packages in publications.
+
+Type &#39;demo()&#39; for some demos, &#39;help()&#39; for on-line help, or
+&#39;help.start()&#39; for an HTML browser interface to help.
+Type &#39;q()&#39; to quit R.
+
+&gt;
+</pre></div>
+</div>
+<p>R comes bundled with a number of data sets. To view these you can use the
+<code class="docutils literal"><span class="pre">data()</span></code> function, which lists all the available data sets.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> data<span class="p">()</span>
+Data sets <span class="kr">in</span> package ‘datasets’<span class="o">:</span>
+
+AirPassengers           Monthly Airline Passenger Numbers <span class="m">1949-1960</span>
+BJsales                 Sales Data with Leading Indicator
+BJsales.lead <span class="p">(</span>BJsales<span class="p">)</span>
+                        Sales Data with Leading Indicator
+BOD                     Biochemical Oxygen Demand
+CO2                     Carbon Dioxide Uptake <span class="kr">in</span> Grass Plants
+<span class="kc">...</span>
+</pre></div>
+</div>
+<p>If you want to stop displaying the data sets without having to scroll to the
+bottom press the <code class="docutils literal"><span class="pre">q</span></code> button on your keyboard.</p>
+<p>We are interested in the Iris flower data set, called <code class="docutils literal"><span class="pre">iris</span></code>, let us load
+it.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> data<span class="p">(</span>iris<span class="p">)</span>
+</pre></div>
+</div>
+<p>This loads the <code class="docutils literal"><span class="pre">iris</span></code> data set into the workspace. You can list the content
+of the workspace using the <code class="docutils literal"><span class="pre">ls()</span></code> function.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="kp">ls</span><span class="p">()</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="s">&quot;iris&quot;</span>
+</pre></div>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">What is a workspace?</p>
+<p class="last">R has the concept of a «&nbsp;workspace&nbsp;». The workspace is the current working
+environment and includes any user defined objects. At the end of a R
+session the user can save the workspace. If saved the workspace will be
+automatically loaded the next time R is started.</p>
+</div>
+</div>
+<div class="section" id="understanding-the-structure-of-the-iris-data-set">
+<h2>Understanding the structure of the <code class="docutils literal"><span class="pre">iris</span></code> data set</h2>
+<p>First of all let us find out about the internal structure of the <code class="docutils literal"><span class="pre">iris</span></code> data set using the <code class="docutils literal"><span class="pre">str()</span></code> funciton.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> str<span class="p">(</span>iris<span class="p">)</span>
+<span class="s">&#39;data.frame&#39;</span><span class="o">:</span>   <span class="m">150</span> obs. of  <span class="m">5</span> variables<span class="o">:</span>
+ <span class="o">$</span> Sepal.Length<span class="o">:</span> num  <span class="m">5.1</span> <span class="m">4.9</span> <span class="m">4.7</span> <span class="m">4.6</span> <span class="m">5</span> <span class="m">5.4</span> <span class="m">4.6</span> <span class="m">5</span> <span class="m">4.4</span> <span class="m">4.9</span> <span class="kc">...</span>
+ <span class="o">$</span> Sepal.Width <span class="o">:</span> num  <span class="m">3.5</span> <span class="m">3</span> <span class="m">3.2</span> <span class="m">3.1</span> <span class="m">3.6</span> <span class="m">3.9</span> <span class="m">3.4</span> <span class="m">3.4</span> <span class="m">2.9</span> <span class="m">3.1</span> <span class="kc">...</span>
+ <span class="o">$</span> Petal.Length<span class="o">:</span> num  <span class="m">1.4</span> <span class="m">1.4</span> <span class="m">1.3</span> <span class="m">1.5</span> <span class="m">1.4</span> <span class="m">1.7</span> <span class="m">1.4</span> <span class="m">1.5</span> <span class="m">1.4</span> <span class="m">1.5</span> <span class="kc">...</span>
+ <span class="o">$</span> Petal.Width <span class="o">:</span> num  <span class="m">0.2</span> <span class="m">0.2</span> <span class="m">0.2</span> <span class="m">0.2</span> <span class="m">0.2</span> <span class="m">0.4</span> <span class="m">0.3</span> <span class="m">0.2</span> <span class="m">0.2</span> <span class="m">0.1</span> <span class="kc">...</span>
+ <span class="o">$</span> Species     <span class="o">:</span> Factor w<span class="o">/</span> <span class="m">3</span> levels <span class="s">&quot;setosa&quot;</span><span class="p">,</span><span class="s">&quot;versicolor&quot;</span><span class="p">,</span><span class="m">..</span><span class="o">:</span> <span class="m">1</span> <span class="m">1</span> <span class="m">1</span> <span class="m">1</span> <span class="m">1</span> <span class="m">1</span> <span class="m">1</span> <span class="m">1</span> <span class="m">1</span> <span class="m">1</span> <span class="kc">...</span>
+</pre></div>
+</div>
+<p>This reveals that the <code class="docutils literal"><span class="pre">iris</span></code> data set is a data frame with 150 observations
+and five variables. It is also worth noting that <code class="docutils literal"><span class="pre">Species</span></code> is recorded as
+a Factor data structure. This means that it has categorical data. In this case
+three different species.</p>
+<p>In R a data frame is a data structure for storing two-dimensional data.  In a
+data frame each column contains the same type of data and each row has values
+for each column.</p>
+<div class="sidebar">
+<p class="first sidebar-title">What is the difference between vectors, lists and data frames?</p>
+<p class="last">As well as data frames R also has concepts of vectors and lists.
+A vector is a list where each item is of the same type. A list
+is more flexible in that the items can be of different types.
+The data frame is essentially a list of equal length lists.</p>
+</div>
+<p>You can find the names of the columns in a data frame using the <code class="docutils literal"><span class="pre">names()</span></code> function.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="kp">names</span><span class="p">(</span>iris<span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="s">&quot;Sepal.Length&quot;</span> <span class="s">&quot;Sepal.Width&quot;</span>  <span class="s">&quot;Petal.Length&quot;</span> <span class="s">&quot;Petal.Width&quot;</span>  <span class="s">&quot;Species&quot;</span>
+</pre></div>
+</div>
+<p>To find the number of columns and rows one can use the <code class="docutils literal"><span class="pre">ncol()</span></code> and
+<code class="docutils literal"><span class="pre">nrow()</span></code> functions, respectively.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="kp">ncol</span><span class="p">(</span>iris<span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="m">5</span>
+<span class="o">&gt;</span> <span class="kp">nrow</span><span class="p">(</span>iris<span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="m">150</span>
+</pre></div>
+</div>
+<p>To view the first six rows of a data frame one can use the <code class="docutils literal"><span class="pre">head()</span></code> function.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span>    <span class="o">&gt;</span> <span class="kp">head</span><span class="p">(</span>iris<span class="p">)</span>
+  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+<span class="m">1</span>          <span class="m">5.1</span>         <span class="m">3.5</span>          <span class="m">1.4</span>         <span class="m">0.2</span>  setosa
+<span class="m">2</span>          <span class="m">4.9</span>         <span class="m">3.0</span>          <span class="m">1.4</span>         <span class="m">0.2</span>  setosa
+<span class="m">3</span>          <span class="m">4.7</span>         <span class="m">3.2</span>          <span class="m">1.3</span>         <span class="m">0.2</span>  setosa
+<span class="m">4</span>          <span class="m">4.6</span>         <span class="m">3.1</span>          <span class="m">1.5</span>         <span class="m">0.2</span>  setosa
+<span class="m">5</span>          <span class="m">5.0</span>         <span class="m">3.6</span>          <span class="m">1.4</span>         <span class="m">0.2</span>  setosa
+<span class="m">6</span>          <span class="m">5.4</span>         <span class="m">3.9</span>          <span class="m">1.7</span>         <span class="m">0.4</span>  setosa
+</pre></div>
+</div>
+<p>To view the last six rows of a data frame one can use the <code class="docutils literal"><span class="pre">tail()</span></code> function.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="kp">tail</span><span class="p">(</span>iris<span class="p">)</span>
+    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+<span class="m">145</span>          <span class="m">6.7</span>         <span class="m">3.3</span>          <span class="m">5.7</span>         <span class="m">2.5</span> virginica
+<span class="m">146</span>          <span class="m">6.7</span>         <span class="m">3.0</span>          <span class="m">5.2</span>         <span class="m">2.3</span> virginica
+<span class="m">147</span>          <span class="m">6.3</span>         <span class="m">2.5</span>          <span class="m">5.0</span>         <span class="m">1.9</span> virginica
+<span class="m">148</span>          <span class="m">6.5</span>         <span class="m">3.0</span>          <span class="m">5.2</span>         <span class="m">2.0</span> virginica
+<span class="m">149</span>          <span class="m">6.2</span>         <span class="m">3.4</span>          <span class="m">5.4</span>         <span class="m">2.3</span> virginica
+<span class="m">150</span>          <span class="m">5.9</span>         <span class="m">3.0</span>          <span class="m">5.1</span>         <span class="m">1.8</span> virginica
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Avertissement</p>
+<p class="last">Often the most difficult aspect of data visualisation using R and
+ggplot2 is getting the data into the right structure. The <code class="docutils literal"><span class="pre">iris</span></code>
+data set is well structured in the sense that each observation is
+recorded as a separate row and each row has the same number of columns.
+Furthermore, each column in a row has a value, note for example
+how each row has a value indicating the <code class="docutils literal"><span class="pre">Species</span></code>.
+Once your data is well structured plotting it becomes relatively
+easy. However, if you are used to adding heterogeneous data to Excel
+the biggest issue that you will face is formatting the data so that
+it becomes well structured and can be loaded as a data frame in R.
+For more detail on how to structure your data see
+<a class="reference internal" href="structuring-and-storing-data.html#tidy-data"><span class="std std-ref">Tidy data</span></a>.</p>
+</div>
+</div>
+<div class="section" id="a-note-on-statistics-in-r">
+<h2>A note on statistics in R</h2>
+<p>Although this book is not about statistics it is worth mentioning that R is a
+superb tool for doing statistics. It has many built in functions for statistical
+computing. For example to calculate the median <code class="docutils literal"><span class="pre">Sepal.Length</span></code> for the <code class="docutils literal"><span class="pre">iris</span></code>
+data one can use the built in <code class="docutils literal"><span class="pre">median()</span></code> function.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> median<span class="p">(</span>iris<span class="o">$</span>Sepal.Length<span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="m">5.8</span>
+</pre></div>
+</div>
+<p>In the above the <code class="docutils literal"><span class="pre">$</span></code> symbol is used to specify the column of interest in the
+data frame.</p>
+<p>Another useful tool for getting an overview of a data set is the
+<code class="docutils literal"><span class="pre">summary()</span></code> function.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="kp">summary</span><span class="p">(</span>iris<span class="p">)</span>
+  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width
+ Min.   <span class="o">:</span><span class="m">4.300</span>   Min.   <span class="o">:</span><span class="m">2.000</span>   Min.   <span class="o">:</span><span class="m">1.000</span>   Min.   <span class="o">:</span><span class="m">0.100</span>
+ <span class="m">1</span>st Qu.<span class="o">:</span><span class="m">5.100</span>   <span class="m">1</span>st Qu.<span class="o">:</span><span class="m">2.800</span>   <span class="m">1</span>st Qu.<span class="o">:</span><span class="m">1.600</span>   <span class="m">1</span>st Qu.<span class="o">:</span><span class="m">0.300</span>
+ Median <span class="o">:</span><span class="m">5.800</span>   Median <span class="o">:</span><span class="m">3.000</span>   Median <span class="o">:</span><span class="m">4.350</span>   Median <span class="o">:</span><span class="m">1.300</span>
+ Mean   <span class="o">:</span><span class="m">5.843</span>   Mean   <span class="o">:</span><span class="m">3.057</span>   Mean   <span class="o">:</span><span class="m">3.758</span>   Mean   <span class="o">:</span><span class="m">1.199</span>
+ <span class="m">3</span>rd Qu.<span class="o">:</span><span class="m">6.400</span>   <span class="m">3</span>rd Qu.<span class="o">:</span><span class="m">3.300</span>   <span class="m">3</span>rd Qu.<span class="o">:</span><span class="m">5.100</span>   <span class="m">3</span>rd Qu.<span class="o">:</span><span class="m">1.800</span>
+ Max.   <span class="o">:</span><span class="m">7.900</span>   Max.   <span class="o">:</span><span class="m">4.400</span>   Max.   <span class="o">:</span><span class="m">6.900</span>   Max.   <span class="o">:</span><span class="m">2.500</span>
+       Species
+ setosa    <span class="o">:</span><span class="m">50</span>
+ versicolor<span class="o">:</span><span class="m">50</span>
+ virginica <span class="o">:</span><span class="m">50</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="default-plotting-in-r">
+<h2>Default plotting in R</h2>
+<p>Before using ggplot2 let us have a look at how to generate default
+plots in R.</p>
+<p>First of all let us plot a histogram of the <code class="docutils literal"><span class="pre">Sepal.Length</span></code>
+(<a class="reference internal" href="#iris-sepal-length-histogram"><span class="std std-numref">Fig. 6</span></a>).</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> hist<span class="p">(</span>iris<span class="o">$</span>Sepal.Length<span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure" id="id2">
+<span id="iris-sepal-length-histogram"></span><img alt="Iris sepal length histogram." src="_images/iris_sepal_length_histogram.png" />
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Histogram of Iris sepal length data generated using R’s built in <code class="docutils literal"><span class="pre">hist()</span></code>
+function.</span></p>
+</div>
+<p>Scatter plots can be produced using the <code class="docutils literal"><span class="pre">plot()</span></code> function.
+The command below produces a scatter plot of <code class="docutils literal"><span class="pre">Sepal.Width</span></code>
+versus <code class="docutils literal"><span class="pre">Sepal.Length</span></code> (<a class="reference internal" href="#iris-sepal-length-vs-width-scatterplot"><span class="std std-numref">Fig. 7</span></a>).</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> plot<span class="p">(</span>iris<span class="o">$</span>Sepal.Length<span class="p">,</span> iris<span class="o">$</span>Sepal.Width<span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure" id="id3">
+<span id="iris-sepal-length-vs-width-scatterplot"></span><img alt="Iris sepal length vs width scatter plot." src="_images/iris_sepal_length_vs_width_scatterplot.png" />
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Scatter plot of Iris sepal length vs width generated using R’s built in <code class="docutils literal"><span class="pre">plot()</span></code>
+function.</span></p>
+</div>
+<p>Finally, a decent overview of the all data can be obtained by passing the
+entire data frame to the <code class="docutils literal"><span class="pre">plot()</span></code> function (<a class="reference internal" href="#iris-sepal-data-summary-plot"><span class="std std-numref">Fig. 8</span></a>).</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> plot<span class="p">(</span>iris<span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure" id="id4">
+<span id="iris-sepal-data-summary-plot"></span><img alt="Iris sepal data summary plot." src="_images/iris_sepal_data_summary_plot.png" />
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Overview plot of Iris data using R’s built in <code class="docutils literal"><span class="pre">plot()</span></code> function.</span></p>
+</div>
+<p>R’s built in plotting functions are useful for getting quick exploratory
+views of the data. However, they are a bit dull. In the next section we will
+make use of the ggplot2 package to make more visually pleasing and informative
+figures.</p>
+</div>
+<div class="section" id="installing-the-ggplot2-package">
+<h2>Installing the ggplot2 package</h2>
+<p>If you haven’t used it before you will need to install the ggplot2 package.
+Detailed instructions can be found in <a class="reference internal" href="managing-your-system.html#installing-r-packages"><span class="std std-ref">Installing R packages</span></a>. In summary
+you need to run the command below.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> install.packages<span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="loading-the-ggplot2-package">
+<h2>Loading the ggplot2 package</h2>
+<p>In order to make use of the ggplot2 package we need to load it. This is achieved
+using the <code class="docutils literal"><span class="pre">library()</span></code> function.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="kn">library</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plotting-using-ggplot2">
+<h2>Plotting using ggplot2</h2>
+<p>To get an idea of what it feels like to work with ggplot2 let us re-create the
+previous histogram and scatter plot with it.</p>
+<p>Let us start with the histogram (<a class="reference internal" href="#ggplot-iris-sepal-length-histogram"><span class="std std-numref">Fig. 9</span></a>).</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> ggplot<span class="p">(</span>data<span class="o">=</span>iris<span class="p">,</span> mapping<span class="o">=</span>aes<span class="p">(</span>Sepal.Length<span class="p">))</span> <span class="o">+</span> geom_histogram<span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure" id="id5">
+<span id="ggplot-iris-sepal-length-histogram"></span><img alt="Iris sepal length histogram plotted using ggplot." src="_images/ggplot_iris_sepal_length_histogram.png" />
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Histogram of Iris sepal length data generated using R’s ggplot2 package.
+The default bin width used is different from the one used by R’s built in <code class="docutils literal"><span class="pre">hist()</span></code>
+function, hence the difference in the appearance of the distribution.</span></p>
+</div>
+<p>The syntax used may look a little bit strange at first. However, before going
+into more details about what it all means let’s create the scatter plot
+(<a class="reference internal" href="#ggplot-iris-sepal-length-vs-width-scatterplot"><span class="std std-numref">Fig. 10</span></a>) to
+get a better feeling of how to work with ggplot2.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> ggplot<span class="p">(</span>data<span class="o">=</span>iris<span class="p">,</span> mapping<span class="o">=</span>aes<span class="p">(</span>x<span class="o">=</span>Sepal.Length<span class="p">,</span> y<span class="o">=</span>Sepal.Width<span class="p">))</span> <span class="o">+</span> geom_point<span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure" id="id6">
+<span id="ggplot-iris-sepal-length-vs-width-scatterplot"></span><img alt="Iris sepal length vs width scatter plotted using ggplot." src="_images/ggplot_iris_sepal_length_vs_width_scatterplot.png" />
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Scatter plot of Iris sepal length vs width generated using R’s ggplot2
+package.</span></p>
+</div>
+<p>In the examples above we provide the <code class="docutils literal"><span class="pre">ggplot()</span></code> function with two
+arguments <code class="docutils literal"><span class="pre">data</span></code> and <code class="docutils literal"><span class="pre">mapping</span></code>. The former contains the data frame
+of interest and the latter specifies the columns(s) to be plotted.</p>
+<p>The <code class="docutils literal"><span class="pre">ggplot</span></code> function returns a ggplot object that can be plotted.  However,
+in order to view an actual plot one needs to add a layer to the ggplot object
+defining how the data should be presented.  In the examples above this is
+achieved using the <code class="docutils literal"><span class="pre">+</span> <span class="pre">geom_histogram()</span></code> and <code class="docutils literal"><span class="pre">+</span> <span class="pre">geom_point()</span></code> syntax.</p>
+<p>A ggplot object consists of separate layers. The reason for separating out the
+generation of a figure into separate layers is to allow the user to better be
+able to reason about the best way to represent the data.</p>
+<p>The three layers that we have come across so far are:</p>
+<ul class="simple">
+<li>Data: the data to be plotted</li>
+<li>Aesthetic: how the data should be mapped to the aesthetics of the plot</li>
+<li>Geom: what type of plot should be used</li>
+</ul>
+<p>Of the above the «&nbsp;aesthetic&nbsp;» layer is the trickiest to get one’s head around.
+However, take for example the scatter plot, one aesthetic choice that we have
+made for that plot is that the <code class="docutils literal"><span class="pre">Sepal.Length</span></code> should be on the x-axis and
+the <code class="docutils literal"><span class="pre">Sepal.Width</span></code> should be on the y-axis.</p>
+<p>To reinforce this let us augment the scatter plot by sizing the points in the
+scatter plot by the <code class="docutils literal"><span class="pre">Petal.Width</span></code> and coloring them by the <code class="docutils literal"><span class="pre">Species</span></code>
+(<a class="reference internal" href="#ggplot-aesthetic-scatter-plot"><span class="std std-numref">Fig. 11</span></a>), all
+of which could be considered to be aesthetic aspects of how to plot the data.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> ggplot<span class="p">(</span>iris<span class="p">,</span> aes<span class="p">(</span>x<span class="o">=</span>Sepal.Length<span class="p">,</span>
+<span class="o">+</span>                  y<span class="o">=</span>Sepal.Width<span class="p">,</span>
+<span class="o">+</span>                  size<span class="o">=</span>Petal.Width<span class="p">,</span>
+<span class="o">+</span>                  color<span class="o">=</span>Species<span class="p">))</span> <span class="o">+</span> geom_point<span class="p">()</span>
+</pre></div>
+</div>
+<p>In the above the secondary prompt, represented by the plus character (<code class="docutils literal"><span class="pre">+</span></code>),
+denotes a continuation line. In other words R interprets the above as one line of code.</p>
+<div class="figure" id="id7">
+<span id="ggplot-aesthetic-scatter-plot"></span><img alt="Iris sepal length vs width, ponints sized by petal width coloured by species." src="_images/ggplot_aesthetic_scatter_plot.png" />
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Scatter plot of Iris sepal length vs width, where the size of each point represents
+the petal width and the colour is used to indicate the species.</span></p>
+</div>
+<p>The information in the scatterplot is now four dimensional! The x- and y-axis
+show <code class="docutils literal"><span class="pre">Sepal.Length</span></code> and <code class="docutils literal"><span class="pre">Sepal.Width</span></code>, the size of the point indicates the
+<code class="docutils literal"><span class="pre">Petal.Width</span></code> and the colour shows the <code class="docutils literal"><span class="pre">Species</span></code>.  By adding
+<code class="docutils literal"><span class="pre">Petal.Width</span></code> and <code class="docutils literal"><span class="pre">Species</span></code> as additional aesthetic attributes to the
+figure we can start to discern structure that was previously hidden.</p>
+</div>
+<div class="section" id="available-geoms">
+<h2>Available «&nbsp;Geoms&nbsp;»</h2>
+<p>The ggplot2 package comes bundled with a wide range of geoms («&nbsp;geometries&nbsp;» for
+plotting data). So far we have seen <code class="docutils literal"><span class="pre">geom_histogram()</span></code> and <code class="docutils literal"><span class="pre">geom_point()</span></code>.
+To find out what other geoms are available you can start typing <code class="docutils literal"><span class="pre">geom_</span></code> into
+a R session and hit the Tab key to list the available geoms using tab-completion.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> geom_
+geom_abline      geom_errorbarh   geom_quantile
+geom_area        geom_freqpoly    geom_raster
+geom_bar         geom_hex         geom_rect
+geom_bin2d       geom_histogram   geom_ribbon
+geom_blank       geom_hline       geom_rug
+geom_boxplot     geom_jitter      geom_segment
+geom_contour     geom_label       geom_smooth
+geom_count       geom_line        geom_spoke
+geom_crossbar    geom_linerange   geom_step
+geom_curve       geom_map         geom_text
+geom_density     geom_path        geom_tile
+geom_density_2d  geom_point       geom_violin
+geom_density2d   geom_pointrange  geom_vline
+geom_dotplot     geom_polygon
+geom_errorbar    geom_qq
+</pre></div>
+</div>
+<p>These work largely as expected, for example the <code class="docutils literal"><span class="pre">geom_boxplot()</span></code> results in a
+boxplot and the <code class="docutils literal"><span class="pre">geom_line()</span></code> results in a line plot. For illustrations
+of these different geoms in action have a look at the
+<a class="reference external" href="http://docs.ggplot2.org/current/index.html">examples in the ggplot2 documentation</a>.</p>
+</div>
+<div class="section" id="scripting-data-visualisation">
+<h2>Scripting data visualisation</h2>
+<p>Now that we have a basic understanding of how to interact with R and the functionality
+in the ggplot library, let’s take a step towards automating the figure generation by
+recording the steps required to plot the data in a script.</p>
+<p>Let us work on the histogram example. In the code below we store the ggplot
+object in the variable <code class="docutils literal"><span class="pre">g</span></code> and make use of <code class="docutils literal"><span class="pre">ggsave()</span></code> to write the plot to
+a file named <code class="docutils literal"><span class="pre">iris_sepal_length_histogram.png</span></code>. Save the code below to a file named
+<code class="docutils literal"><span class="pre">iris_sepal_length_histogram.R</span></code> using your favorite text editor.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+data<span class="p">(</span>iris<span class="p">)</span>
+
+g <span class="o">&lt;-</span> ggplot<span class="p">(</span>data<span class="o">=</span>iris<span class="p">,</span> aes<span class="p">(</span>Sepal.Length<span class="p">))</span> <span class="o">+</span>
+     geom_histogram<span class="p">()</span>
+
+ggsave<span class="p">(</span><span class="s">&#39;iris_sepal_length_histogram.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To run this code we make use of the program <code class="docutils literal"><span class="pre">Rscript</span></code>, which comes bundled with your
+R installation.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ Rscript iris_sepal_length_histogram.R
+</pre></div>
+</div>
+<p>This will write the file <code class="docutils literal"><span class="pre">iris_sepal_length_histogram.png</span></code> to your current working
+directory.</p>
+</div>
+<div class="section" id="faceting">
+<h2>Faceting</h2>
+<p>In the extended scatterplot example (<a class="reference internal" href="#ggplot-aesthetic-scatter-plot"><span class="std std-numref">Fig. 11</span></a>)
+we found that it was useful to be able to visualise which data points belonged
+to which species. Maybe it would be useful to do something similar with the
+data in our histogram.</p>
+<p>In order to achieve this ggplot2 provides the concept of faceting,
+the ability to split your data by one or more variables. Let us split the
+data by <code class="docutils literal"><span class="pre">Species</span></code> using the <code class="docutils literal"><span class="pre">facet_grid()</span></code> function
+(<a class="reference internal" href="#ggplot-faceted-histogram"><span class="std std-numref">Fig. 12</span></a>).</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+data<span class="p">(</span>iris<span class="p">)</span>
+
+g <span class="o">&lt;-</span> ggplot<span class="p">(</span>data<span class="o">=</span>iris<span class="p">,</span> aes<span class="p">(</span>Sepal.Length<span class="p">))</span> <span class="o">+</span>
+     geom_histogram<span class="p">()</span> <span class="o">+</span>
+     facet_grid<span class="p">(</span>Species <span class="o">~</span> <span class="m">.</span><span class="p">)</span>
+
+ggsave<span class="p">(</span><span class="s">&#39;iris_sepal_length_histogram.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the above the <code class="docutils literal"><span class="pre">facet_grid(Species</span> <span class="pre">~</span> <span class="pre">.)</span></code> states that we want one
+<code class="docutils literal"><span class="pre">Species</span></code> per row, as opposed to one species per column
+(<code class="docutils literal"><span class="pre">facet_grid(.</span> <span class="pre">~</span> <span class="pre">Species)</span></code>). Replacing the dot (<code class="docutils literal"><span class="pre">.</span></code>) with another
+variable would result in faceting the data into a two dimensional grid.</p>
+<div class="figure" id="id8">
+<span id="ggplot-faceted-histogram"></span><img alt="Iris sepal length histogram faceted by species." src="_images/ggplot_faceted_histogram.png" />
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Histogram of Iris sepal length data faceted by species.</span></p>
+</div>
+<p>Faceting is a really powerful feature of ggplot2! It allows you to
+easily split data based on one or more variables and can result in
+insights about underlying structures and multivariate trends.</p>
+</div>
+<div class="section" id="adding-more-colour">
+<h2>Adding more colour</h2>
+<p>The faceted histogram plot (<a class="reference internal" href="#ggplot-faceted-histogram"><span class="std std-numref">Fig. 12</span></a>) clearly
+illustrates that there are differences in the distributions of the sepal length
+between the different Iris species.</p>
+<p>However, suppose that the faceted histogram figure was meant to be displayed
+next to the extended scatter plot (<a class="reference internal" href="#ggplot-aesthetic-scatter-plot"><span class="std std-numref">Fig. 11</span></a>). To make it easier to make
+the mental connection between the two data representations it may be useful
+to colour the histograms by species as well.</p>
+<p>The colour of a histogram is an aesthetic characteristic. Let us add the
+fill colour as an aesthetic to the histogram geometric object
+(<a class="reference internal" href="#ggplot-faceted-and-coloured-histogram"><span class="std std-numref">Fig. 13</span></a>).</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+data<span class="p">(</span>iris<span class="p">)</span>
+
+g <span class="o">&lt;-</span> ggplot<span class="p">(</span>data<span class="o">=</span>iris<span class="p">,</span> aes<span class="p">(</span>Sepal.Length<span class="p">))</span> <span class="o">+</span>
+     geom_histogram<span class="p">(</span>aes<span class="p">(</span>fill<span class="o">=</span>Species<span class="p">))</span> <span class="o">+</span>
+     facet_grid<span class="p">(</span>Species <span class="o">~</span> <span class="m">.</span><span class="p">)</span>
+
+ggsave<span class="p">(</span><span class="s">&#39;iris_sepal_length_histogram.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure" id="id9">
+<span id="ggplot-faceted-and-coloured-histogram"></span><img alt="Iris sepal length histogram faceted and coloured by species." src="_images/ggplot_faceted_and_coloured_histogram.png" />
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Histogram of Iris sepal length data faceted and coloured by species.</span></p>
+</div>
+</div>
+<div class="section" id="purpose-of-data-visualisation">
+<h2>Purpose of data visualisation</h2>
+<p>There are two main purposes of representing data visually:</p>
+<ol class="arabic simple">
+<li>To explore the data</li>
+<li>To convey a message to an audience</li>
+</ol>
+<p>So far we have been focussing on the former. Let us now think a little bit
+more about the latter, conveying a message to an audience. In other words
+creating figures for presentations and publications.</p>
+</div>
+<div class="section" id="conveying-a-message-to-an-audience">
+<h2>Conveying a message to an audience</h2>
+<p>The first step in creating an informative figure is to consider who the
+intended audience is. Is it the general public, school children or
+plant biologists? The general public may be interested in trends, whereas
+a plant scientist may be interested in a more detailed view.</p>
+<p>Secondly, what is the message that you want to convey? Stating this explicitly
+will help you when making decisions about the content and the layout of the
+figure.</p>
+<p>Thirdly, what medium will be used to display the figure? Will it be displayed
+for a minute on a projector or will it be printed in an article? The audience
+will have less time to absorb details from the former.</p>
+<p>So suppose we wanted to create a figure intended for biologists, illustrating
+that there is not much variation in the local GC content of <em>Streptomyces
+coelicolor</em>  A3(2), building on the example in <a class="reference internal" href="data-analysis.html"><span class="doc">Data analysis</span></a>. Let us
+further suppose that the medium is in a printed journal where the figure can
+have a maximum width of 89 mm.</p>
+<p>First of all make sure that you are in the <code class="docutils literal"><span class="pre">S.coelicolor-local-GC-content</span></code>
+directory created in <a class="reference internal" href="data-analysis.html"><span class="doc">Data analysis</span></a>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ cd S.coelicolor-local-GC-content
+</pre></div>
+</div>
+<p>Now create a file named <code class="docutils literal"><span class="pre">local_gc_content_figure.R</span></code> and add the R code below
+to it.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+
+df <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;local_gc_content.csv&quot;</span><span class="p">,</span> header<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+
+g1 <span class="o">=</span> ggplot<span class="p">(</span>df<span class="p">,</span> aes<span class="p">(</span>x<span class="o">=</span>middle<span class="p">,</span> y<span class="o">=</span>gc_content<span class="p">))</span>
+g2 <span class="o">=</span> g1 <span class="o">+</span> geom_line<span class="p">()</span>
+
+ggsave<span class="p">(</span><span class="s">&quot;local_gc_content.png&quot;</span><span class="p">,</span> width<span class="o">=</span><span class="m">89</span><span class="p">,</span> height<span class="o">=</span><span class="m">50</span><span class="p">,</span> units<span class="o">=</span><span class="s">&quot;mm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The code above loads the data and plots it as a line, resulting in a local GC
+content plot. Note also that we specify the width and height of the plot in
+millimeters in the <code class="docutils literal"><span class="pre">ggsave()</span></code> function.</p>
+<p>Let’s try it out.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ Rscript local_gc_content_figure.R
+</pre></div>
+</div>
+<p>It should create a file named <code class="docutils literal"><span class="pre">local_gc_content.png</span></code> containing the image
+in <a class="reference internal" href="#local-gc-content-1"><span class="std std-numref">Fig. 14</span></a>.</p>
+<div class="figure" id="id10">
+<span id="local-gc-content-1"></span><img alt="Initial attempt at plotting local GC content." src="_images/local_gc_content_1.png" />
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Initial attempt at plotting local GC content.</span></p>
+</div>
+<p>The scale of the y-axis makes the plot misleading. It looks like there
+is a lot of variation in the data. Let’s expand the y range to span from 0 to
+100 percent (<a class="reference internal" href="#local-gc-content-2"><span class="std std-numref">Fig. 15</span></a>).</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+
+df <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;local_gc_content.csv&quot;</span><span class="p">,</span> header<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+
+g1 <span class="o">=</span> ggplot<span class="p">(</span>df<span class="p">,</span> aes<span class="p">(</span>x<span class="o">=</span>middle<span class="p">,</span> y<span class="o">=</span>gc_content<span class="p">))</span>
+g2 <span class="o">=</span> g1 <span class="o">+</span> geom_line<span class="p">()</span>
+<span class="hll">g3 <span class="o">=</span> g2 <span class="o">+</span> ylim<span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">)</span>
+</span>
+ggsave<span class="p">(</span><span class="s">&quot;local_gc_content.png&quot;</span><span class="p">,</span> width<span class="o">=</span><span class="m">89</span><span class="p">,</span> height<span class="o">=</span><span class="m">50</span><span class="p">,</span> units<span class="o">=</span><span class="s">&quot;mm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure" id="id11">
+<span id="local-gc-content-2"></span><img alt="Local GC content with y-axis scaled corretly." src="_images/local_gc_content_2.png" />
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Local GC content with y-axis scaled corretly.</span></p>
+</div>
+<p>At the moment it looks like the line is floating in mid-air. This is because
+ggplot adds some padding to the limits. Let’s turn this off
+(<a class="reference internal" href="#local-gc-content-3"><span class="std std-numref">Fig. 16</span></a>).</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+
+df <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;local_gc_content.csv&quot;</span><span class="p">,</span> header<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+
+g1 <span class="o">=</span> ggplot<span class="p">(</span>df<span class="p">,</span> aes<span class="p">(</span>x<span class="o">=</span>middle<span class="p">,</span> y<span class="o">=</span>gc_content<span class="p">))</span>
+g2 <span class="o">=</span> g1 <span class="o">+</span> geom_line<span class="p">()</span>
+g3 <span class="o">=</span> g2 <span class="o">+</span> ylim<span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">)</span>
+<span class="hll">g4 <span class="o">=</span> g3 <span class="o">+</span> coord_cartesian<span class="p">(</span>expand<span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+</span>
+ggsave<span class="p">(</span><span class="s">&quot;local_gc_content.png&quot;</span><span class="p">,</span> width<span class="o">=</span><span class="m">89</span><span class="p">,</span> height<span class="o">=</span><span class="m">50</span><span class="p">,</span> units<span class="o">=</span><span class="s">&quot;mm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure" id="id12">
+<span id="local-gc-content-3"></span><img alt="Local GC content without padding." src="_images/local_gc_content_3.png" />
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Local GC content without padding.</span></p>
+</div>
+<p>The labels on the x-axis are a bit difficult to read. To make it easier
+to understand the content of the x-axis let’s scale it to use kilobases
+as its units (<a class="reference internal" href="#local-gc-content-4"><span class="std std-numref">Fig. 17</span></a>).</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+
+df <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;local_gc_content.csv&quot;</span><span class="p">,</span> header<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+
+g1 <span class="o">=</span> ggplot<span class="p">(</span>df<span class="p">,</span> aes<span class="p">(</span>x<span class="o">=</span>middle<span class="p">,</span> y<span class="o">=</span>gc_content<span class="p">))</span>
+g2 <span class="o">=</span> g1 <span class="o">+</span> geom_line<span class="p">()</span>
+g3 <span class="o">=</span> g2 <span class="o">+</span> ylim<span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">)</span>
+g4 <span class="o">=</span> g3 <span class="o">+</span> coord_cartesian<span class="p">(</span>expand<span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="hll">g5 <span class="o">=</span> g4 <span class="o">+</span> scale_x_continuous<span class="p">(</span>labels<span class="o">=</span><span class="kr">function</span><span class="p">(</span>x<span class="p">)</span>x<span class="o">/</span><span class="m">1000</span><span class="p">)</span>
+</span>
+ggsave<span class="p">(</span><span class="s">&quot;local_gc_content.png&quot;</span><span class="p">,</span> width<span class="o">=</span><span class="m">89</span><span class="p">,</span> height<span class="o">=</span><span class="m">50</span><span class="p">,</span> units<span class="o">=</span><span class="s">&quot;mm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the above <code class="docutils literal"><span class="pre">function(x)x/1000</span></code> is a function definition. The function
+returns the input (<code class="docutils literal"><span class="pre">x</span></code>) divided by 1000. In this case the function is
+passed anonymously (the function is not given a name) to the <code class="docutils literal"><span class="pre">labels</span></code>
+argument of the <code class="docutils literal"><span class="pre">scale_x_continuous()</span></code> function.</p>
+<div class="figure" id="id13">
+<span id="local-gc-content-4"></span><img alt="Local GC content with kilobases as the x axis units." src="_images/local_gc_content_4.png" />
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Local GC content with kilobases as the x axis units.</span></p>
+</div>
+<p>Finally, let us add labels to the x-axis (<a class="reference internal" href="#local-gc-content-5"><span class="std std-numref">Fig. 18</span></a>).</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+
+df <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;local_gc_content.csv&quot;</span><span class="p">,</span> header<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+
+g1 <span class="o">=</span> ggplot<span class="p">(</span>df<span class="p">,</span> aes<span class="p">(</span>x<span class="o">=</span>middle<span class="p">,</span> y<span class="o">=</span>gc_content<span class="p">))</span>
+g2 <span class="o">=</span> g1 <span class="o">+</span> geom_line<span class="p">()</span>
+g3 <span class="o">=</span> g2 <span class="o">+</span> ylim<span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">)</span>
+g4 <span class="o">=</span> g3 <span class="o">+</span> coord_cartesian<span class="p">(</span>expand<span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+g5 <span class="o">=</span> g4 <span class="o">+</span> scale_x_continuous<span class="p">(</span>labels<span class="o">=</span><span class="kr">function</span><span class="p">(</span>x<span class="p">)</span>x<span class="o">/</span><span class="m">1000</span><span class="p">)</span>
+<span class="hll">g6 <span class="o">=</span> g5 <span class="o">+</span> xlab<span class="p">(</span><span class="s">&quot;Nucleotide position (KB)&quot;</span><span class="p">)</span> <span class="o">+</span> ylab<span class="p">(</span><span class="s">&quot;GC content (%)&quot;</span><span class="p">)</span>
+</span>
+ggsave<span class="p">(</span><span class="s">&quot;local_gc_content.png&quot;</span><span class="p">,</span> width<span class="o">=</span><span class="m">89</span><span class="p">,</span> height<span class="o">=</span><span class="m">50</span><span class="p">,</span> units<span class="o">=</span><span class="s">&quot;mm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure" id="id14">
+<span id="local-gc-content-5"></span><img alt="Local GC content with labelled axis." src="_images/local_gc_content_5.png" />
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Local GC content with labelled axis.</span></p>
+</div>
+<p>This is a good point to start tracking the <code class="docutils literal"><span class="pre">local_gc_content_figure.R</span></code> file
+in version control, see <a class="reference internal" href="keeping-track-of-your-work.html"><span class="doc">Keeping track of your work</span></a> for more details.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git status
+On branch master
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        local_gc_content.png
+        local_gc_content_figure.R
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</pre></div>
+</div>
+<p>So we have two untracked files: the R script and the PNG file the R script
+generates. We do not want to track the latter in version control as it can be
+generated from the script. Let us therefore update our <code class="docutils literal"><span class="pre">.gitignore</span></code> file.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Sco.dna
+local_gc_content.csv
+<span class="hll">local_gc_content.png
+</span></pre></div>
+</div>
+<p>Let’s check the status of the Git repository now.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git status
+On branch master
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+        modified:   .gitignore
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        local_gc_content_figure.R
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</pre></div>
+</div>
+<p>Great, let us add the <code class="docutils literal"><span class="pre">local_gc_content_figure.R</span></code> and <code class="docutils literal"><span class="pre">.gitignore</span></code> files
+and commit a snapshot.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git add local_gc_content_figure.R .gitignore
+$ git commit -m &quot;Added R script for generating local GC plot&quot;
+[master cba7277] Added R script for generating local GC plot
+ 2 files changed, 13 insertions(+)
+ create mode 100644 local_gc_content_figure.R
+</pre></div>
+</div>
+</div>
+<div class="section" id="writing-a-caption">
+<h2>Writing a caption</h2>
+<p>All figures require a caption to help the audience understand how to interpret
+the plot.</p>
+<p>In this particular case two particular items stand out as missing from being
+able to interpret the plot. First of all what is the source of the DNA, i.e.
+where is the data from? Secondly, what was the window and step sizes of the
+sliding window analysis?</p>
+<p>It would also be appropriate to explicitly state what the message of the plot
+is, i.e. that there is not much variation in the local GC content. In this case
+we could further substantiate this claim by citing the mean and standard deviation
+of the local GC content across the genome.</p>
+<div class="highlight-R"><div class="highlight"><pre><span></span><span class="o">&gt;</span> df <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&quot;local_gc_content.csv&quot;</span><span class="p">,</span> header<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="kp">mean</span><span class="p">(</span>df<span class="o">$</span>gc_content<span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="m">72.13948</span>
+<span class="o">&gt;</span> sd<span class="p">(</span>df<span class="o">$</span>gc_content<span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="m">1.050728</span>
+</pre></div>
+</div>
+<p>Below is the final figure and its caption (<a class="reference internal" href="#local-gc-content-6"><span class="std std-numref">Fig. 19</span></a>).
+The caption has been added by the tool chain used to build this book, not
+by R.</p>
+<div class="figure" id="id15">
+<span id="local-gc-content-6"></span><img alt="Local GC content with labelled axis." src="_images/local_gc_content_5.png" />
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">There is little variation in the local GC content of <em>Streptomyces
+coelicolor</em> A3(2). Using a window size of 100 KB and a step size of 50 KB
+the local GC content has a mean of 72.1% and a standard deviation of 1.1%.</span></p>
+</div>
+</div>
+<div class="section" id="other-useful-tools-for-scripting-the-generation-of-figures">
+<span id="id1"></span><h2>Other useful tools for scripting the generation of figures</h2>
+<p>There are many different ways of visualising data and generating figures.  A
+broad distinction can be made between <em>ad-hoc</em> methods, usually using graphical
+user interfaces and button clicking, and methods that can be automated, i.e.
+methods that can reproduce the figure without human intervention.</p>
+<p>One take home message from this chapter is that you should automate the
+generation of your figures. This will save you time when you realise that you
+need to alter the style of all the figures when submitting a manuscript for
+publication. It will also make your research more reproducible.</p>
+<p>Apart from R and ggplot2 there are several tools available for automating the
+generation of your figures.  In Python there is the <a class="reference external" href="http://matplotlib.org/">matplotlib</a> package, which is very powerful and it is a great
+tool for plotting data generated from Python scripts.  <a class="reference external" href="http://www.gnuplot.info/">Gnuplot</a> is a scripting language designed to plot data and
+mathematical functions, it is particularly good at depicting three-dimensional
+data.</p>
+<p>If you are dealing with graphs, as in evolutionary trees and metabolic pathways,
+it is worth having a look at <a class="reference external" href="www.graphviz.org/">Graphviz</a>.</p>
+<p>A general purpose tool for manipulating images on the command line is
+<a class="reference external" href="www.imagemagick.org/">ImageMagick</a>. It can be used to resize, crop and
+transform your images.  It is a great tool for automating your image
+manipulation.</p>
+<p>If you are wanting to visualise data in web pages it is worth investing some
+time looking at the various JavaScript libraries available for data
+visualisation. One poplar option is <a class="reference external" href="https://d3js.org/">D3.js</a>.</p>
+</div>
+<div class="section" id="key-concepts">
+<h2>Key concepts</h2>
+<ul class="simple">
+<li>R and ggplot2 are powerful tools for visualising data</li>
+<li>R should also be your first port of call for statistical computing
+(statistical computing is not covered in this book)</li>
+<li>In ggplot2 the visual representation of your data is built up using layers</li>
+<li>Separating out different aspects of plotting into different layers makes
+it easier to reason about the data and the best way to represent it visually</li>
+<li>Faceting allows you to separate out data on one or more variables, this is
+one of the strengths of ggplot2</li>
+<li>Scripting your data visualisation makes it easier to modify later on</li>
+<li>Scripting your data visualisation makes it reproducible</li>
+<li>When creating a figure ask yourself: who is the audience and what is the message</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, otu.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

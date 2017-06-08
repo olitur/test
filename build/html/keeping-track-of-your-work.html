@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Keeping track of your work &#8212; test</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/yeti/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.10.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/canopee_ico.ico"/>
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Data analysis" href="data-analysis.html" />
+    <link rel="prev" title="Structuring and storing data" href="structuring-and-storing-data.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          test</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Yo!test <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#who-should-read-this-book">Who should read this book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#licence">Licence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#source-code">Source code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting-some-motivation.html">Getting some motivation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting-some-motivation.html#why-you-should-care-about-computing-and-coding">Why you should care about computing and coding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-some-motivation.html#what-you-can-expect-to-learn-here">What you can expect to learn here</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-think-like-a-computer.html">How to think like a computer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#binary-bits-and-bytes">Binary, bits and bytes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#character-encodings">Character encodings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#real-numbers">Real numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#boolean-logic">Boolean logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#the-microprocessor">The microprocessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#computer-memory">Computer memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-think-like-a-computer.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="first-steps-towards-automation.html">First steps towards automation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#first-things-first-how-to-find-help">First things first, how to find help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#creating-a-new-directory-for-our-project">Creating a new directory for our project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#downloading-the-swiss-prot-knowledge-base">Downloading the Swiss-Prot knowledge base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#creating-a-work-flow-using-pipes">Creating a work flow using pipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#examining-files-without-modifying-them">Examining files, without modifying them</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#finding-fasta-identifier-lines-corresponding-to-human-proteins">Finding FASTA identifier lines corresponding to human proteins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#extracting-the-uniprot-identifiers">Extracting the UniProt identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#using-redirection-to-create-an-output-file">Using redirection to create an output file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#viewing-the-command-history">Viewing the command history</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#clearing-the-terminal-window">Clearing the terminal window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#copying-and-renaming-files">Copying and renaming files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#removing-files-and-directories">Removing files and directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-steps-towards-automation.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="structuring-and-storing-data.html">Structuring and storing data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#data-structures">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#data-persistence">Data persistence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#the-beauty-of-plain-text-files">The beauty of plain text files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#useful-plain-text-file-formats">Useful plain text file formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#tidy-data">Tidy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#find-a-good-text-editor-and-learn-how-to-use-it">Find a good text editor and learn how to use it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structuring-and-storing-data.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Keeping track of your work</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-git">What is Git?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#first-time-configuration-of-git">First time configuration of Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#initialise-the-project">Initialise the project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-script-for-downloading-the-swissprot-fasta-file">Create a script for downloading the SwissProt FASTA file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#improve-script-for-downloading-swissprot-fasta-file">Improve script for downloading SwissProt FASTA file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-script-for-counting-the-number-of-proteins-in-a-genome">Create script for counting the number of proteins in a genome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#more-useful-git-commands">More useful git commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-analysis.html">Data analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#what-is-python">What is Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#using-python-in-interactive-mode">Using Python in interactive mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#determining-the-gc-count-of-a-sequence">Determining the GC count of a sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-reusable-functions">Creating reusable functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#list-slicing">List slicing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#loops">Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-a-sliding-window-gc-content-function">Creating a sliding window GC-content function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#downloading-the-genome">Downloading the genome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#reading-and-writing-files">Reading and writing files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#creating-a-function-for-reading-in-the-streptomyces-sequence">Creating a function for reading in the <em>Streptomyces</em> sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#writing-out-the-sliding-window-analysis">Writing out the sliding window analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-analysis.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-visualisation.html">Data visualisation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#starting-r-and-loading-the-iris-flower-data-set">Starting R and loading the Iris flower data set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#understanding-the-structure-of-the-iris-data-set">Understanding the structure of the <code class="docutils literal"><span class="pre">iris</span></code> data set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#a-note-on-statistics-in-r">A note on statistics in R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#default-plotting-in-r">Default plotting in R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#installing-the-ggplot2-package">Installing the ggplot2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#loading-the-ggplot2-package">Loading the ggplot2 package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#plotting-using-ggplot2">Plotting using ggplot2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#available-geoms">Available «&nbsp;Geoms&nbsp;»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#scripting-data-visualisation">Scripting data visualisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#faceting">Faceting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#adding-more-colour">Adding more colour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#purpose-of-data-visualisation">Purpose of data visualisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#conveying-a-message-to-an-audience">Conveying a message to an audience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#writing-a-caption">Writing a caption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#other-useful-tools-for-scripting-the-generation-of-figures">Other useful tools for scripting the generation of figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data-visualisation.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collaborating-on-projects.html">Collaborating on projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#find-a-friend">Find a friend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#get-a-github-or-bitbucket-account">Get a GitHub or BitBucket account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#pushing-the-project-to-a-remote-server">Pushing the project to a remote server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#collaboration-using-git">Collaboration using Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#working-in-parallel">Working in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#resolving-conflicts">Resolving conflicts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborating-on-projects.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="creating-scientific-documents.html">Creating scientific documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#starting-the-manuscript">Starting the manuscript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#converting-the-document-to-html-using-pandoc">Converting the document to HTML using pandoc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#adding-a-figure">Adding a figure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#converting-the-document-to-pdf">Converting the document to PDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#reference-management">Reference management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#adding-meta-data">Adding meta data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#benefits-of-using-pandoc-and-plain-text-files">Benefits of using Pandoc and plain text files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#alternative-plain-text-approaches">Alternative plain text approaches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#using-non-plain-text-file-formats">Using non-plain text file formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creating-scientific-documents.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="automation-is-your-friend.html">Automation is your friend</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="automation-is-your-friend.html#introduction-to-make">Introduction to <code class="docutils literal"><span class="pre">make</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation-is-your-friend.html#creating-a-makefile">Creating a <code class="docutils literal"><span class="pre">Makefile</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation-is-your-friend.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="practical-problem-solving.html">Practical problem solving</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#stop-and-think">Stop and think</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#measuring-success">Measuring success</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#more-string-processing">More string processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#extracting-the-organism-name">Extracting the organism name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#only-running-tests-when-the-module-is-called-directly">Only running tests when the module is called directly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#counting-the-number-of-unique-organisms">Counting the number of unique organisms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#finding-the-number-of-variants-per-species-and-the-number-of-proteins-per-variant">Finding the number of variants per species and the number of proteins per variant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-problem-solving.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="working-remotely.html">Working remotely</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#jargon-busting">Jargon busting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#logging-in-using-the-secure-shell-protocol">Logging in using the Secure Shell protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#copying-files-using-secure-copy">Copying files using Secure Copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#password-less-authentication-using-ssh-keys">Password-less authentication using SSH keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#managing-your-login-details-using-ssh-config">Managing your login details using SSH config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#executing-long-running-commands-on-remote-hosts">Executing long running commands on remote hosts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-remotely.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="managing-your-system.html">Managing your system</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-file-system">The file system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-path-environment-variable">The <code class="docutils literal"><span class="pre">PATH</span></code> environment variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#the-root-user">The <code class="docutils literal"><span class="pre">root</span></code> user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#using-package-managers">Using package managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#compiling-software-from-source">Compiling software from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-python-packages">Installing Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-r-packages">Installing R packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-perl-modules">Installing Perl modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#installing-latex-packages">Installing Latex packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#automated-provisioning">Automated provisioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-your-system.html#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="next-steps.html">Next steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#apply-what-you-have-learnt">Apply what you have learnt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#be-social">Be social</a></li>
+<li class="toctree-l2"><a class="reference internal" href="next-steps.html#recommended-reading">Recommended reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Keeping track of your work</a><ul>
+<li><a class="reference internal" href="#what-is-git">What is Git?</a></li>
+<li><a class="reference internal" href="#first-time-configuration-of-git">First time configuration of Git</a></li>
+<li><a class="reference internal" href="#initialise-the-project">Initialise the project</a></li>
+<li><a class="reference internal" href="#create-a-script-for-downloading-the-swissprot-fasta-file">Create a script for downloading the SwissProt FASTA file</a></li>
+<li><a class="reference internal" href="#improve-script-for-downloading-swissprot-fasta-file">Improve script for downloading SwissProt FASTA file</a></li>
+<li><a class="reference internal" href="#create-script-for-counting-the-number-of-proteins-in-a-genome">Create script for counting the number of proteins in a genome</a></li>
+<li><a class="reference internal" href="#more-useful-git-commands">More useful git commands</a></li>
+<li><a class="reference internal" href="#key-concepts">Key concepts</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="keeping-track-of-your-work">
+<h1>Keeping track of your work</h1>
+<p>You are probably used to keeping a record of your experimental work in either
+physical or electronic lab notebooks. These provide a valuable audit trail and
+form part of the process that makes your research reproducible.</p>
+<p>However, keeping track of ones work when developing data analysis scripts
+present different types of challenges from keeping track of laboratory work.</p>
+<p>When developing scripts it is often beneficial to build them up one
+step at a time, adding functionality as one goes along. However, as scripts
+become more complex one often accidentally breaks them whilst trying to add
+more functionality. To make things worse it can often be difficult to remember
+what changes were introduced since the last working state of the code.</p>
+<p>Because this is a problem that software engineers have been faced with
+for a long time there are now some excellent tools for dealing with it. The
+solution is to use a version control system. Here we will use Git, one of the
+most popular version control systems, to keep track of our work. In its most
+basic form you can think of Git as a tool for providing you with an infinite
+undo-button.</p>
+<div class="section" id="what-is-git">
+<h2>What is Git?</h2>
+<p>Git is a version control system. That means that it allows you to track changes
+made to files over time by taking snapshots. Furthermore it allows you to view
+differences between snapshots and revert back to previous snapshots. In fact
+Git can do a lot more than this, but this is all we need to know for this
+chapter. We will go into more detail on the collaborative aspects of Git in
+the <a class="reference internal" href="collaborating-on-projects.html"><span class="doc">Collaborating on projects</span></a> chapter.</p>
+<p>Git tracks snapshots of files in what is called a repository. You can have many
+Git repositories. On my computer I have a directory named <code class="docutils literal"><span class="pre">projects</span></code> that currently
+contains around fifty sub-directories representing the projects that I have been
+working on recently. Each one of these sub-directories is a separate Git repository.</p>
+<p>Git can track some or all of the files in a repository. The files can be
+located in the top level directory or in sub-directories. However, Git cannot
+track any files that live in parent directories of the base Git repository,
+e.g. none of my Git repositories can track files located in the parent
+<code class="docutils literal"><span class="pre">projects</span></code> directory.</p>
+<p>In a Git repository files can be in one of four states: untracked, staged,
+unmodified and modified. When a file is initially created it is in an untracked
+state, meaning that it is not yet under version control. To start tracking the
+file one adds it to Git, and the state of the file then changes to
+staged. This means that the file is staged to be included in the next snapshot.
+Multiple files can be in a staged state when one takes a snapshot. To take a
+snapshot one commits all the files that are in the so called «&nbsp;staging area&nbsp;».
+The state of the files then changes from staged to unmodified, see figure
+<a class="reference internal" href="#git-workflow-illustration"><span class="std std-numref">Fig. 4</span></a>.</p>
+<p>Any subsequent editing of the files under version control would result in their
+state changing from unmodified to modified.  When one is happy with the edits
+made one would then add the files to the staging area and their state would
+change from modified to staged. At that point one is ready to take another
+snapshot by committing the staged edits. The state of the files then, again,
+change from staged to unmodified. And the cycle continues
+(<a class="reference internal" href="#git-workflow-illustration"><span class="std std-numref">Fig. 4</span></a>).</p>
+<div class="figure" id="id1">
+<span id="git-workflow-illustration"></span><img alt="Git workflow illustration." src="_images/git-workflow.png" />
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Diagram illustrating the states a file can have in a Git repository.
+The commands <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span></code> and <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></code> are the key components to
+creating a snapshot. The <code class="docutils literal"><span class="pre">vim</span></code> command symbolises editing the file
+using the vim text editor, but any program altering the content of the
+file will result in the file being marked as <em>modified</em> by Git.</span></p>
+</div>
+</div>
+<div class="section" id="first-time-configuration-of-git">
+<h2>First time configuration of Git</h2>
+<p>Git may or may not be installed by default on your system. To find out if it is
+try running the command below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git --version
+</pre></div>
+</div>
+<p>If Git is installed you will see output along the lines of the below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>git version 2.6.3
+</pre></div>
+</div>
+<p>If Git is not installed you will see a <code class="docutils literal"><span class="pre">command</span> <span class="pre">not</span> <span class="pre">found</span></code> message. In this
+case you will need to install it. If you do not know how to do this you can
+find general instructions on how to install software in
+<a class="reference internal" href="managing-your-system.html"><span class="doc">Managing your system</span></a>.</p>
+<p>Although we won’t go into it in this chapter, Git is fundamentally a collaboration
+tool that helps people work on projects together. This means that we need to give
+Git some information about us for it to be able to keep track of who has done what,
+specifically our name and email address.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git config --global user.name &quot;Tjelvar Olsson&quot;
+$ git config --global user.email &quot;tjelvar@biologistsguide2computing.com&quot;
+</pre></div>
+</div>
+<p>We will look at the collaboration aspect of git in the
+<a class="reference internal" href="collaborating-on-projects.html"><span class="doc">Collaborating on projects</span></a> chapter.</p>
+</div>
+<div class="section" id="initialise-the-project">
+<h2>Initialise the project</h2>
+<p>The first thing to do is to initialise the project using the <code class="docutils literal"><span class="pre">git</span> <span class="pre">init</span></code> command.
+If run with no argument it will set up tracking of files in the current working
+directory. If given an argument, such as <code class="docutils literal"><span class="pre">protein-count</span></code>, git will
+create a new directory with this name and set up tracking of files within it.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>git init protein-count
+cd protein-count/
+</pre></div>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">What does <code class="docutils literal"><span class="pre">init</span></code> mean?</p>
+<p class="last">In computing the term <code class="docutils literal"><span class="pre">init</span></code> is often used to abbreviate the word
+«&nbsp;initialise&nbsp;», i.e a one time event that results in the creation of a new
+entity.</p>
+</div>
+<p>Use your editor of choice and create the markdown file <code class="docutils literal"><span class="pre">README.md</span></code> and add
+the content below to it.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span># Protein count
+
+Count the number of proteins of particular species
+in a SwissProt FASTA file.
+</pre></div>
+</div>
+<p>As mentioned, files in a Git repository, the project directory, can be in one
+of four states: untracked, unmodified, modified and staged. To view the state
+one can use the command <code class="docutils literal"><span class="pre">git</span> <span class="pre">status</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git status
+</pre></div>
+</div>
+<p>The command below produces the output below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>On branch master
+
+Initial commit
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        README.md
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</pre></div>
+</div>
+<p>This tells us that the <code class="docutils literal"><span class="pre">README.md</span></code> file is untracked, in other words it is
+not yet under version control in Git. However, we would like to track it, so
+we add it to the Git repository using the <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span></code> command.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git add README.md
+</pre></div>
+</div>
+<p>Let’s see how this affected the status of the repository.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+
+        new file:   README.md
+</pre></div>
+</div>
+<p>This stages the <code class="docutils literal"><span class="pre">README.md</span></code> file to be committed. To commit the current
+snapshot of the project to the Git repository we use the <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></code>
+command.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git commit -m &quot;Added readme file.&quot;
+[master (root-commit) e1dc880] Added readme file.
+ 1 file changed, 12 insertions(+)
+ create mode 100644 README.md
+</pre></div>
+</div>
+<p>In the above the <code class="docutils literal"><span class="pre">-m</span></code> option allows us to specify a commit message on
+the command line. The commit message should describe the change that
+your are committing. It will be useful when you review the project at
+a later date. It also helps communicate your change to any collaborators
+working on the same project.</p>
+<p>Again, let’s see how this affected the status of the repository.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git status
+On branch master
+nothing to commit, working directory clean
+</pre></div>
+</div>
+<p>That’s all you need to know to get started with Git. Start by initialising a
+project using <code class="docutils literal"><span class="pre">git</span> <span class="pre">init</span></code>. Then use <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span></code> and <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></code> iteratively
+to stage and commit snapshots of your project to version control.</p>
+</div>
+<div class="section" id="create-a-script-for-downloading-the-swissprot-fasta-file">
+<h2>Create a script for downloading the SwissProt FASTA file</h2>
+<p>We will now convert the command we used to download the SwissProt FASTA file
+from <a class="reference internal" href="first-steps-towards-automation.html"><span class="doc">First steps towards automation</span></a> into a script. To add some
+organisation we will put this script in a directory named <code class="docutils literal"><span class="pre">scripts</span></code>. We will
+also create a directory named <code class="docutils literal"><span class="pre">data</span></code> for storing the downloaded file. By
+specifying more than one argument to the <code class="docutils literal"><span class="pre">mkdir</span></code> command one can create
+multiple directories.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ mkdir scripts data
+</pre></div>
+</div>
+<p>Using your favorite text editor enter the text below into the file
+<code class="docutils literal"><span class="pre">scripts/get_data.bash</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>#!/bin/bash
+
+curl --location --output data/uniprot_sprot.fasta.gz http://bit.ly/1l6SAKb
+</pre></div>
+</div>
+<p>The only difference between this script and the command we entered on the command
+line is the first line <code class="docutils literal"><span class="pre">#!/bin/bash</span></code>. This is a special construct, called the
+shebang, and is used to specify the shell to use when executing the content of the
+file.</p>
+<p>However, in order to be able to execute the file, i.e. run it as a program, it
+needs to have «&nbsp;execute permissions&nbsp;». One can view the current set of permissions
+of a file by using <code class="docutils literal"><span class="pre">ls</span> <span class="pre">-l</span></code> (mnemonics <code class="docutils literal"><span class="pre">ls</span></code> list, <code class="docutils literal"><span class="pre">-l</span></code> long).</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ls -l scripts/get_data.bash
+-rw-r--r--  1 olssont  1340193827  88 29 Nov 10:45 scripts/get_data.bash
+</pre></div>
+</div>
+<p>Note the first ten characters, the first specifies the file type and the
+remaining nine relate to the permissions of the file,
+see <a class="reference internal" href="#file-permission-illustration"><span class="std std-numref">Fig. 5</span></a>.  There are three modes
+that can  be turned on or off: read (<code class="docutils literal"><span class="pre">r</span></code>), write (<code class="docutils literal"><span class="pre">w</span></code>) and execute (<code class="docutils literal"><span class="pre">x</span></code>).
+Furthermore, these can be specified for the owner (<code class="docutils literal"><span class="pre">u</span></code>), group (<code class="docutils literal"><span class="pre">g</span></code>) and
+all users (<code class="docutils literal"><span class="pre">a</span></code> or <code class="docutils literal"><span class="pre">o</span></code>). The nine characters above state that the owner has
+read and write permissions on the file <code class="docutils literal"><span class="pre">rw-</span></code>, whereas both the group and
+all other users only have permission to read the file <code class="docutils literal"><span class="pre">r--</span></code>.</p>
+<div class="figure" id="id2">
+<span id="file-permission-illustration"></span><img alt="File permissions illustration." src="_images/file-permissions.png" />
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Figure illustrating how the file permissions string should be interpreted.
+In the above the user has read, write and execute permissions. The members
+of the group have read and exectue permissions. All other users only have
+execute permissions on the file. In this case the file type character <code class="docutils literal"><span class="pre">-</span></code>
+indicates that the file is a regular/executable file. Other file type
+characters include <code class="docutils literal"><span class="pre">d</span></code> and <code class="docutils literal"><span class="pre">l</span></code> which are used to represent directories
+and symbolic links respectively.</span></p>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">What is a symbolic link?</p>
+<p class="last">The legend of <a class="reference internal" href="#file-permission-illustration"><span class="std std-numref">Fig. 5</span></a> mentioned symbolic links.
+A symbolic link is a special type of file that points at another file.
+These can for example be used to create references to canonical representations
+of your data.</p>
+</div>
+<p>Let’s take a moment to expand on the concept of groups in Unix-like operating
+systems. A user can be part of several groups. However, a file can only
+belong to one group.
+For example a PhD student could be part of the groups
+<code class="docutils literal"><span class="pre">famous-project-leader-group</span></code> and <code class="docutils literal"><span class="pre">awesome-institute-group</span></code>. In this
+hypothetical scenario the default group for the PhD student is the
+<code class="docutils literal"><span class="pre">famous-project-leader-group</span></code>. Any files that the student generates would
+therefore be assigned the group <code class="docutils literal"><span class="pre">famous-project-leader-group</span></code>. If the student
+wanted to make a file more widely accessible throughout the institute they
+could change the file’s group to <code class="docutils literal"><span class="pre">awesome-institute-group</span></code>.</p>
+<p>Let us give the file execute permissions. This is achieved using the <code class="docutils literal"><span class="pre">chmod</span></code>
+command, mnemonic «&nbsp;change file modes&nbsp;». The <code class="docutils literal"><span class="pre">chmod</span></code> command can be invoked in
+a number of different ways. Here we use the symbolic mode to specify that the
+user and the group (<code class="docutils literal"><span class="pre">ug</span></code>) should be given execute permissions (<code class="docutils literal"><span class="pre">+x</span></code>) on the
+<code class="docutils literal"><span class="pre">scripts/get_data.bash</span></code> file.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ chmod ug+x scripts/get_data.bash
+$ ls -l scripts/get_data.bash
+-rwxr-xr--  1 olssont  1340193827  88 29 Nov 10:45 scripts/get_data.bash
+</pre></div>
+</div>
+<p>Let us test the script by running it.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ./scripts/get_data.bash
+$ ls data/
+uniprot_sprot.fasta.gz
+</pre></div>
+</div>
+<p>The file was downloaded to the <code class="docutils literal"><span class="pre">data</span></code> directory, success!</p>
+<p>This is a good time to add the script to version control.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git add scripts/get_data.bash
+$ git commit -m &quot;Added script for downloading SwissProt FASTA file.&quot;
+[master f80731e] Added script for downloading SwissProt FASTA file.
+ 1 file changed, 3 insertions(+)
+ create mode 100755 scripts/get_data.bash
+</pre></div>
+</div>
+<p>Let us check the status of our project.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git status
+On branch master
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        data/
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</pre></div>
+</div>
+<p>Git is telling us that there are files in the <code class="docutils literal"><span class="pre">data</span></code> directory that are
+currently not being tracked. However, in this project the data directory will
+contain files downloaded from a canonical resource and as the download script
+is in version control we do not need or want to track the files in this
+directory.</p>
+<p>It is possible to tell Git to ignore files.  Using your text editor of choice
+create the file <code class="docutils literal"><span class="pre">.gitignore</span></code> and add the content below to it.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Hidden files</p>
+<p class="last">On Unix-like systems dot-files, files starting with a «&nbsp;.&nbsp;», are treated as
+hidden files. These files are usually used to store configuration settings.
+The <code class="docutils literal"><span class="pre">~/.bashrc</span></code> file, for example, is used to configure your Bash shell
+environment. To list hidden files use <code class="docutils literal"><span class="pre">ls</span> <span class="pre">-a</span></code>.</p>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>data/*
+</pre></div>
+</div>
+<p>In Bash the <code class="docutils literal"><span class="pre">*</span></code> symbol represents a wild card pattern that can match any
+string.  The <code class="docutils literal"><span class="pre">*</span></code> symbol can be used in the same fashion in the <code class="docutils literal"><span class="pre">.gitignore</span></code>
+file. As such the line we added to our <code class="docutils literal"><span class="pre">.gitignore</span></code> file tells Git to ignore
+all files in the <code class="docutils literal"><span class="pre">data</span></code> directory.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git status
+On branch master
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</pre></div>
+</div>
+<p>Git now ignores the content of the <code class="docutils literal"><span class="pre">data</span></code> directory and tells us that the
+<code class="docutils literal"><span class="pre">.gitignore</span></code> file is untracked. Let us add this file.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git add .gitignore
+$ git commit -m &quot;Added gitignore file.&quot;
+$ git status
+On branch master
+nothing to commit, working directory clean
+</pre></div>
+</div>
+</div>
+<div class="section" id="improve-script-for-downloading-swissprot-fasta-file">
+<h2>Improve script for downloading SwissProt FASTA file</h2>
+<p>However, the current setup has got an issue in terms of reproducibility.
+Depending on when the SwissProt FASTA file was downloaded one may obtain
+different results. It would therefore be useful to include the date of
+access in the file name. This can be achieved using the <code class="docutils literal"><span class="pre">date</span></code> command.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ date
+Thu 26 Nov 2015 09:20:32 GMT
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">date</span></code> command  can be configured to create custom output formats using
+the <code class="docutils literal"><span class="pre">+</span></code> symbol followed by a string template specifying the desired format.
+In the below <code class="docutils literal"><span class="pre">%Y</span></code>, <code class="docutils literal"><span class="pre">%m</span></code> and <code class="docutils literal"><span class="pre">%d</span></code> will be replaced by the year, month and
+day respectively.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ date +&#39;%Y-%m-%d&#39;
+2015-11-26
+</pre></div>
+</div>
+<p>To get the output of the <code class="docutils literal"><span class="pre">date</span></code> command into the file name one can use Bash’s
+concept of command substitution. Command substitution makes it possible to
+evaluate the result of a command within a string. To see this in action we can
+use the <code class="docutils literal"><span class="pre">echo</span></code> command, which simply prints out the string that it is given.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ echo &quot;Today it is $(date +&#39;%d&#39;)th&quot;
+Today it is 26th
+</pre></div>
+</div>
+<p>It is time to introduce the concept of a variable.
+A variable is basically a means of storing a piece of information using
+a descriptive name. In bash one can assign a variable using the equals
+character (<code class="docutils literal"><span class="pre">=</span></code>). Below we create a variable named <code class="docutils literal"><span class="pre">PRIBNOV_BOX</span></code> and
+assign it the value <code class="docutils literal"><span class="pre">TATAAT</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ PRIBNOV_BOX=&quot;TATAAT&quot;
+</pre></div>
+</div>
+<p>The value of the variable can then be accessed by prefixing
+the variable name with the dollar character (<code class="docutils literal"><span class="pre">$</span></code>).</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ echo $PRIBNOV_BOX
+TATAAT
+</pre></div>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">Don’t Repeat Yourself</p>
+<p class="last">The use of variables is a key concept in programming. It allows programmers to
+avoid having to repeat themselves. This is important as repetition increases
+the chances of introducing errors. Suppose, for example that you had a scaling
+factor of 1.35611 that you used at ten different places in your script. That
+presents ten opportunities for typing in the wrong number. Further, suppose
+that you, later on, needed to change the scaling factor. That presents ten
+opportunities for forgetting to update a value and another ten opportunities
+for mistyping the value. In this case it would have been better to create a
+variable named <code class="docutils literal"><span class="pre">scaling_factor</span></code> and use that variable in the ten places in
+your script. That way they are guaranteed to be the same value and you only
+need to edit one line if you need to change the value. In programming avoiding
+repetition is important enough to warrant it’s own acronym <a class="reference internal" href="glossary.html#term-dry"><span class="xref std std-term">DRY</span></a> (Don’t
+Repeat Yourself).</p>
+</div>
+<p>We now have all the information we need to improve the script. Edit the
+<code class="docutils literal"><span class="pre">script/get_data.bash</span></code> file to look like the below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>#!/bin/bash
+
+FNAME=&quot;data/uniprot_sprot.$(date +&#39;%Y-%m-%d&#39;).fasta.gz&quot;
+curl --location --output $FNAME http://bit.ly/1l6SAKb
+</pre></div>
+</div>
+<p>Let’s try running the script.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ./scripts/get_data.bash
+</pre></div>
+</div>
+<p>Now we can check that the script has produced an appropriately named file.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ls data/
+uniprot_sprot.2015-11-26.fasta.gz uniprot_sprot.fasta.gz
+</pre></div>
+</div>
+<p>We have added a piece of functionality and have tested that it works as expected.
+This is a good time to commit our changes to Git. However, before we do that
+let us examine the changes to the project since the last commit
+using the <code class="docutils literal"><span class="pre">git</span> <span class="pre">diff</span></code> command.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git diff
+diff --git a/scripts/get_data.bash b/scripts/get_data.bash
+index d8e9bda..338d82c 100755
+--- a/scripts/get_data.bash
++++ b/scripts/get_data.bash
+@@ -1,3 +1,4 @@
+ #!/bin/bash
+
+-curl --location --output data/uniprot_sprot.fasta.gz http://bit.ly/1l6SAKb
++FNAME=&quot;data/uniprot_sprot.$(date +&#39;%Y-%m-%d&#39;).fasta.gz&quot;
++curl --location --output $FNAME http://bit.ly/1l6SAKb
+</pre></div>
+</div>
+<p>The command above tells us that one line has been removed, the one prefixed by a
+minus sign, and that two lines have been added, the ones prefixed by a plus sign.
+In fact we have modified one line and added one, but the effect is the same.</p>
+<p>Let us now add and commit the changes to Git.  We need to do this as working
+with Git is a cyclical process. You make changes by editing the files, you add
+the changes that you want to snapshot to the staging area, then you commit the
+staged changes. At this point the cycle starts all over again
+<a class="reference internal" href="#git-workflow-illustration"><span class="std std-numref">Fig. 4</span></a>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git add scripts/get_data.bash
+$ git commit -m &quot;Updated download script to include date in file name.&quot;
+[master 7512894] Updated download script to include date in file name.
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+</pre></div>
+</div>
+<p>By adding the date of download to the file name reproducibility is improved and
+it means that we can download the file on different dates and ensure that no data
+is overwritten.</p>
+<p>However, it is still possible to accidentally delete or modify the data file.
+To overcome this, and further improve reproducibility, it is good practise to
+give the data file read-only permissions. This means that the file cannot be
+modified or deleted, only read. To do this we will make use of the <code class="docutils literal"><span class="pre">chmod</span></code>
+command. In this instance we will make use of an absolute mode.  Absolute modes
+encode the permissions using the numbers 1, 2 and 4 that represent execute, write
+and read modes respectively. These numbers can be combined to create any
+permission, for example 7 represents read, write and execute permissions and 5
+represents read and execute permissions.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Value</th>
+<th class="head">Permission</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>execute</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>write</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>write &amp; execute</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>read</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>read &amp; execute</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>read &amp; write</td>
+</tr>
+<tr class="row-even"><td>7</td>
+<td>read &amp; write &amp; execute</td>
+</tr>
+</tbody>
+</table>
+<p>To set the permissions for the owner, group and all other users
+one simply uses three such numbers. For example to give the owner read and
+write permissions and the group and all other users read-only permissions one
+would use the absolute mode 644.</p>
+<p>In this instance we want to set the file to read-only for the owner, group and
+all other users so we will use the absolute mode 444.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>#!/bin/bash
+
+FNAME=&quot;data/uniprot_sprot.$(date +&#39;%Y-%m-%d&#39;).fasta.gz&quot;
+curl --location --output $FNAME http://bit.ly/1l6SAKb
+chmod 444 $FNAME
+</pre></div>
+</div>
+<p>If you run the script now you will see that it changes the permissions of the
+downloaded file.  If you run the script again, on the same day, you will
+notice that the it complains that it has not got permissions to write to
+the file. This is expected as the <code class="docutils literal"><span class="pre">curl</span></code> command is wanting to overwrite
+the existing read-only file.</p>
+<p>Let’s add these changes to the staging area.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git add scripts/get_data.bash
+</pre></div>
+</div>
+<p>It is good practise to try to make the commit message no more than
+50 characters long. Sometimes this is not enough. In these cases you
+can create a multi line commit message using a text editor (likely
+to be <code class="docutils literal"><span class="pre">vim</span></code> by default) by omitting the <code class="docutils literal"><span class="pre">-m</span></code> flag.</p>
+<p>Let’s try this now.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git commit
+</pre></div>
+</div>
+<p>This should open a text editor with the text below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span># Please enter the commit message for your changes. Lines starting
+# with &#39;#&#39; will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#       modified:   scripts/get_data.bash
+</pre></div>
+</div>
+<p>Use your text editor to edit this message to the below.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Set permissions of data file to read only
+
+The intention of this change is to prevent accidental deletion or
+modification of the raw data file.
+
+# Please enter the commit message for your changes. Lines starting
+# with &#39;#&#39; will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#       modified:   scripts/get_data.bash
+</pre></div>
+</div>
+<p>When you save the file you should see the output below in the terminal.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git commit
+[master ad2a4c5] Set permissions of data file to read only
+ 1 file changed, 1 insertion(+)
+</pre></div>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">Help! I’m stuck in Vim.</p>
+<p>If you tried out the <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></code> command you may depeding
+on the configuration of your computer get thrown into Vim.
+If you don’t know how to use Vim, it can be tricky just to
+get out of it.</p>
+<ol class="last arabic simple">
+<li>Press the Esc key. This ensure that you are in «&nbsp;normal&nbsp;» mode.</li>
+<li>Press the colon (<code class="docutils literal"><span class="pre">:</span></code>) key. This puts you in «&nbsp;command-line&nbsp;» mode.</li>
+<li>Enter the text <code class="docutils literal"><span class="pre">q!</span></code>. This is the command to quit (<code class="docutils literal"><span class="pre">q</span></code>) without saving (<code class="docutils literal"><span class="pre">!</span></code>).</li>
+<li>Press the Enter key. This executes the command from step 3.</li>
+</ol>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">What if I want to edit or delete a file that is read only?</p>
+<p>In this case you first need to change the mode of the file so that you
+have write permissions to it. This is achieved using the <code class="docutils literal"><span class="pre">chmod</span></code>
+command, for example:</p>
+<div class="last highlight-none"><div class="highlight"><pre><span></span>$ chmod u+w file_i_want_to_edit.txt
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="create-script-for-counting-the-number-of-proteins-in-a-genome">
+<h2>Create script for counting the number of proteins in a genome</h2>
+<p>Now that we have a script for downloading the SwissProt FASTA file let us
+convert what we learnt in <a class="reference internal" href="first-steps-towards-automation.html"><span class="doc">First steps towards automation</span></a> into a script
+for counting the number of proteins for a particular species.</p>
+<p>Add the lines below to the file <code class="docutils literal"><span class="pre">scripts/protein_count.bash</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>#!/bin/bash
+
+gunzip -c data/uniprot_sprot.fasta.gz | grep &#39;OS=Homo sapiens&#39; \
+| cut -d &#39;|&#39; -f 2 | wc -l
+</pre></div>
+</div>
+<p>Make the file executable and test the script.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ chmod +x scripts/protein_count.bash
+$ ./scripts/protein_count.bash
+   20194
+</pre></div>
+</div>
+<p>At the moment the path to the data file and the species are hard coded into the
+script. It would be nice if we could turn these two parameters into command
+line arguments. We can do this using the special variables <code class="docutils literal"><span class="pre">$1</span></code> and <code class="docutils literal"><span class="pre">$2</span></code> that
+represent the first and second command line arguments, respectively.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>#!/bin/bash
+
+DATA_FILE_PATH=$1
+SPECIES=$2
+echo &quot;Input file: $DATA_FILE_PATH&quot;
+echo &quot;Species: $SPECIES&quot;
+
+gunzip -c $DATA_FILE_PATH | grep &quot;OS=$SPECIES&quot; \
+| cut -d &#39;|&#39; -f 2 | wc -l
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Avertissement</p>
+<p>Bash makes a distinction between single and double quotes. To expand
+variables one needs to use double quotes. If not one will get the
+literal value of the string within the single quotes. For example,
+the command <code class="docutils literal"><span class="pre">echo</span> <span class="pre">'Species:</span> <span class="pre">$SPECIES'</span></code> would print the literal
+string <code class="docutils literal"><span class="pre">Species:</span> <span class="pre">$SPECIES</span></code>.</p>
+<div class="last highlight-none"><div class="highlight"><pre><span></span>$ SPECIES=H.sapiens
+$ echo &quot;Species: $SPECIES&quot;
+Species: H.sapiens
+$ echo &#39;Species: $SPECIES&#39;
+Species: $SPECIES
+</pre></div>
+</div>
+</div>
+<p>This is a good point to test if things are working as expected.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ./scripts/protein_count.bash data/uniprot_sprot.2015-11-26.fasta.gz &quot;Homo sapiens&quot;
+Input file: data/uniprot_sprot.2015-11-26.fasta.gz
+Species: Homo sapiens
+   20194
+</pre></div>
+</div>
+<p>Success! Let us add and commit the script to Git.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git add scripts/protein_count.bash
+$ git commit -m &quot;Added script for counting the numbers of proteins.&quot;
+[master b9de9bc] Added script for counting the numbers of proteins.
+ 1 file changed, 9 insertions(+)
+ create mode 100755 scripts/protein_count.bash
+</pre></div>
+</div>
+</div>
+<div class="section" id="more-useful-git-commands">
+<h2>More useful git commands</h2>
+<p>We’ve covered a lot of ground in this chapter. Can you remember everything that
+we did and the motivation behind each individual step? If not, that is okay,
+we can use Git to remind us using the <code class="docutils literal"><span class="pre">git</span> <span class="pre">log</span></code> command.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git log --oneline
+b9de9bc Added script for counting the numbers of proteins.
+a672257 Added command to set permissions of data file to read only.
+7512894 Updated download script to include date in file name.
+6c6f65b Added gitignore file.
+f80731e Added script for downloading SwissProt FASTA file.
+e1dc880 Added readme file.
+</pre></div>
+</div>
+<p>Note that the comments above give a decent description of what was done. However,
+it would have been useful to include more information about the motive behind some
+changes. If one does not make use of the <code class="docutils literal"><span class="pre">-m</span></code> argument when using <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></code>
+one can use the default text editor to write a more comprehensive commit message.
+For example, a more informative commit message for commit <code class="docutils literal"><span class="pre">a672257</span></code> could have
+looked something along the lines of:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Added command to set permissions of data file to read only.
+
+The intention of this change is to prevent accidental deletion or
+modification of the raw data file.
+</pre></div>
+</div>
+<p>Another useful feature of Git is that it allows us to inspect the changes
+between commits using the <code class="docutils literal"><span class="pre">git</span> <span class="pre">diff</span></code> command.  For
+example to understand what changed in commit <code class="docutils literal"><span class="pre">a672257</span></code> we can compare it to
+the previous commit <code class="docutils literal"><span class="pre">7512894</span></code>.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git diff 7512894 a672257
+diff --git a/scripts/get_data.bash b/scripts/get_data.bash
+index 338d82c..0bbc17b 100755
+--- a/scripts/get_data.bash
++++ b/scripts/get_data.bash
+@@ -2,3 +2,4 @@
+
+ FNAME=&quot;data/uniprot_sprot.$(date +&#39;%Y-%m-%d&#39;).fasta.gz&quot;
+ curl --location --output $FNAME http://bit.ly/1l6SAKb
++chmod 444 $FNAME
+</pre></div>
+</div>
+<p>In the above we can see that we added the line
+<code class="docutils literal"><span class="pre">chmod</span> <span class="pre">444</span> <span class="pre">$FNAME</span></code> to the <code class="docutils literal"><span class="pre">scripts/get_data.bash</span></code> file.</p>
+</div>
+<div class="section" id="key-concepts">
+<h2>Key concepts</h2>
+<ul class="simple">
+<li>When working with files it is often desirable to be able to track changes</li>
+<li>When programming it is particularly useful to be able to save working
+states of the code</li>
+<li>This gives one the opportunity to roll back to a previously working state if
+things go wrong</li>
+<li>Git is a powerful version control system</li>
+<li>To get started with Git one only needs to get familiar with a handful of
+commands</li>
+<li>Use <code class="docutils literal"><span class="pre">git</span> <span class="pre">init</span></code> to initialise a Git repository</li>
+<li>Use <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">file-to-add</span></code> to start tracking a file in Git</li>
+<li>Use <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;your</span> <span class="pre">summary</span> <span class="pre">message</span> <span class="pre">here&quot;</span></code> to record a snapshot in Git</li>
+<li>The overhead of using Git whilst programming is minimal</li>
+<li>The benefits of using Git are great</li>
+<li>Start using Git in your day-to-day work right now!</li>
+<li>On Unix-like systems files have write, read and execute permissions that can
+be turned on and off</li>
+<li>By making a file executable it can be run as an independent program</li>
+<li>By giving raw data files read only permissions one can ensure that they are
+not accidentally modified or deleted</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, otu.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
